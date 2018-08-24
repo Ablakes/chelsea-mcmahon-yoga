@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby LUT`,
+    title: `Chelsea McMahon Yoga`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,7 +10,7 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: `pages`,
-      }
+      },
     },
     `gatsby-transformer-remark`,
   ],
