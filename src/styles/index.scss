@@ -1,0 +1,12 @@
+$color-secondary:#FFF6E6;
+
+@font-face {
+  font-family: 'Gabriola';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gabriola'), url('../../public/assets/fonts/gabriola.woff') format('woff');
+}
+
+@import "/base/gatsby-default";
+@import "/components/header";
+@import "/components/navbar";

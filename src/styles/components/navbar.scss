@@ -1,0 +1,36 @@
+.navbar {
+    background: no-repeat center url(../../public/assets/img/nav-oval.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.4rem;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+    & ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 45%;
+        margin: 0;
+    }
+    & li {
+        transition: all .3s;
+        padding: .5rem;
+        list-style-type: none;
+        font-family: Lato;
+        font-size: 1rem;
+        font-weight: 200;
+        &:hover {
+            padding: .5rem;
+            transition: all .3s;
+            font-weight: 400;
+            border-bottom: 2px solid $color-secondary;
+        }
+      }
+      & a {
+        text-decoration: none;
+        color: $color-secondary;
+      }
+}
+
+
+  
