@@ -1,10 +1,21 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import styled from 'styled-components'
 
-const ArtPage = () => (
-  <div>
-    <h1>Schedule</h1>
-  </div>
+import rackCard from '../data/images/rack-card.png'
+import paintBG from '../data/images/light-paint-bg.jpg'
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  background: no-repeat url(${paintBG});
+  background-size: cover;
+  margin-top: -4.4rem;
+`
+
+const Schedule = () => (
+  <Container>
+    <img src={rackCard} alt="" style={{ paddingTop: '10rem' }} />
+  </Container>
 )
 
-export default ArtPage
+export default Schedule

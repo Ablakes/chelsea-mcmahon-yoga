@@ -5,6 +5,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import bannerImage from '../data/images/banner-image.jpg'
 import navOval from '../data/images/nav-oval.svg'
 import swoop from '../data/images/swoop.png'
+
 import theme from '../data/theme'
 
 const Banner = styled.div`
@@ -41,6 +42,12 @@ const Navbar = styled.nav`
   li {
     list-style-type: none;
     margin-bottom: 0;
+    backface-visibility: hidden;
+    &:hover {
+      transform: scale(1.05);
+      border-bottom: 2px solid ${props => props.theme.secondaryColor};
+      transition: transform 0.2s ease;
+    }
   }
   a {
     font-family: lato;
@@ -49,8 +56,6 @@ const Navbar = styled.nav`
     letter-spacing: 1px;
     font-size: 1.1rem;
     color: ${props => props.theme.secondaryColor};
-    &:hover {
-    }
   }
 `
 
@@ -62,15 +67,7 @@ const Header = ({ siteTitle }) => (
         <img src={swoop} alt="" />
       </Banner>
       <Navbar>
-        <ul
-          style={{
-            margin: '0',
-            display: 'flex',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            width: '40%',
-          }}
-        >
+        <ul>
           <li>
             <Link to="/">Home</Link>
           </li>

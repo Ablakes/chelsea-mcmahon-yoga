@@ -2,31 +2,25 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled, { ThemeProvider } from 'styled-components'
 
-import chelseaCrouch from '../data/images/chelsea-crouch.jpg'
 import paintBG from '../data/images/light-paint-bg.jpg'
 import theme from '../data/theme'
 
+import CrouchImage from '../components/crouchImage'
+import Button from '../components/button'
+
 const Container = styled.div`
+  background: no-repeat center url(${paintBG});
   display: flex;
   justify-content: space-between;
   position: relative;
   top: -4.4rem;
   left: 0;
   z-index: 1;
-  height: 35rem;
-  max-width: 1440px;
-  background: no-repeat center url(${paintBG});
-`
-
-const Image = styled.div`
-  height: 100%;
-  width: 490px;
-  background: no-repeat center url(${chelseaCrouch});
 `
 
 const AboutSection = styled.div`
-  max-width: 850px;
-  padding: 8rem 4rem 4rem 4rem;
+  flex: 2;
+  padding: 7rem 4rem 4rem 4rem;
   h3 {
     font-family: Lato;
     color: ${props => props.theme.primaryColor};
@@ -43,25 +37,10 @@ const AboutSection = styled.div`
   }
 `
 
-const Button = styled.div`
-  z-index: 10;
-  color: ${props => props.theme.primaryColor};
-  border: 2px solid ${props => props.theme.primaryColor};
-  font-family: Lato;
-  padding: 0.5rem 0.75rem;
-  border-radius: 5px;
-  text-align: center;
-  width: 10rem;
-  &:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-  }
-`
-
 const IndexPage = () => (
   <ThemeProvider theme={theme}>
     <Container>
-      <Image />
+      <CrouchImage />
       <AboutSection>
         <h3 style={{ textAlign: 'center' }}>About</h3>
         <hr />
@@ -75,7 +54,7 @@ const IndexPage = () => (
         </p>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <Link to="/about/">
-            <Button>READ MORE</Button>
+            <Button textContent="READ MORE" />
           </Link>
         </div>
       </AboutSection>
