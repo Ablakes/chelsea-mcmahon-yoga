@@ -1,17 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Chelsea McMahon Yoga`,
+    title: 'Chelsea McMahon Yoga',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: `pages`,
-      },
-    },
-    `gatsby-transformer-remark`,
   ],
 }

@@ -1,5 +1,10 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
-export default () => {
-  return <div>Art</div>
-}
+const ArtPage = () => (
+  <div>
+    <h1>Art</h1>
+  </div>
+)
+
+export default ArtPage
