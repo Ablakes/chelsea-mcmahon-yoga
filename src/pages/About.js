@@ -26,7 +26,7 @@ const Para = styled.p`
 const Subtitle = styled.h3`
   font-family: Lato;
   color: ${props => props.theme.primaryColor};
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
 `
 

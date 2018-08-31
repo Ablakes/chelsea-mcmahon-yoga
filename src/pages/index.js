@@ -13,24 +13,26 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: -4.4rem;
+  margin-top: -4.4rem;
   left: 0;
   z-index: 1;
 `
 
 const AboutSection = styled.div`
   flex: 2;
-  padding: 7rem 4rem 4rem 4rem;
+  padding: 8rem 4rem 4rem 4rem;
   h3 {
     font-family: Lato;
     color: ${props => props.theme.primaryColor};
-    font-weight: 400;
+    font-weight: 300;
   }
   p {
     color: ${props => props.theme.primaryColor};
     font-family: Lato;
+    font-weight: 400;
+    padding: 1rem 0;
     font-size: 1.1rem;
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
   a {
     text-decoration: none;

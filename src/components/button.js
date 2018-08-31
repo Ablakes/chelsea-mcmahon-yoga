@@ -10,10 +10,13 @@ const Btn = styled.div`
   padding: 0.5rem 0.75rem;
   border-radius: 5px;
   text-align: center;
+  margin-top: 0.75rem;
+  backface-visibility: hidden;
   width: 10rem;
   &:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
+    transform: scale(1.03);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
   }
 `
 

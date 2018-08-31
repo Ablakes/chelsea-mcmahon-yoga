@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled, { ThemeProvider } from 'styled-components'
+import theme from '../data/theme'
 
 import bannerImage from '../data/images/banner-image.jpg'
 import navOval from '../data/images/nav-oval.svg'
 import swoop from '../data/images/swoop.png'
 
-import theme from '../data/theme'
+
 
 const Banner = styled.div`
   background: no-repeat center url(${bannerImage});
@@ -32,6 +33,7 @@ const Navbar = styled.nav`
   height: 4.4rem;
   display: flex;
   justify-content: center;
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
   ul {
     margin: 0;
     display: flex;
@@ -43,10 +45,11 @@ const Navbar = styled.nav`
     list-style-type: none;
     margin-bottom: 0;
     backface-visibility: hidden;
-    &:hover {
-      transform: scale(1.05);
-      border-bottom: 2px solid ${props => props.theme.secondaryColor};
-      transition: transform 0.2s ease;
+    font-weight: 300;
+
+    .is-active {
+      font-weight: 600;
+      color: white;
     }
   }
   a {
@@ -54,8 +57,11 @@ const Navbar = styled.nav`
     text-decoration: none;
     font-weight: 300;
     letter-spacing: 1px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: ${props => props.theme.secondaryColor};
+    &:hover {
+      border-bottom: 2px solid ${props => props.theme.secondaryColor};
+    }
   }
 `
 
@@ -69,16 +75,16 @@ const Header = ({ siteTitle }) => (
       <Navbar>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" activeClassName="is-active" exact={true}>Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" activeClassName="is-active">About</Link>
           </li>
           <li>
-            <Link to="/schedule">Schedule</Link>
+            <Link to="/schedule" activeClassName="is-active">Schedule</Link>
           </li>
           <li>
-            <Link to="/art">Art</Link>
+            <Link to="/art" activeClassName="is-active">Art</Link>
           </li>
         </ul>
       </Navbar>
