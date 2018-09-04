@@ -44,7 +44,19 @@ const IndexPage = () => (
     <Container>
       <CrouchImage />
       <AboutSection>
-        <h3 style={{ textAlign: 'center' }}>About</h3>
+        <h3
+          style={{
+            textAlign: 'center',
+            lineHeight: '2rem',
+            fontWeight: 300,
+          }}
+        >
+          <span style={{ fontStyle: 'italic' }}>
+            “She started dancing to that fine-fine music, and her life was saved
+            by Rock-n-Roll.”
+          </span>{' '}
+          – Lou Reed
+        </h3>
         <hr />
         <p>
           Hi! My name is Chelsea McMahon. I earned my 500hr. RYT at Boundless

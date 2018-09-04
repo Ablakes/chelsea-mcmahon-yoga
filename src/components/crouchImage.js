@@ -15,7 +15,7 @@ const CrouchImage = () => (
       style={{
         marginBottom: 0,
         borderRadius: '5px',
-        boxShadow: '0px 0px 20px rgba(0,0,0,.5)',
+        boxShadow: '5px 0px 20px rgba(0,0,0,.2)',
       }}
     />
   </ImageContainer>

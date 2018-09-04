@@ -15,16 +15,19 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        paddingTop: 0,
-        maxWidth: 1440,
-      }}
-    >
-      {children()}
-      <Footer />
+    <div style={{ boxShadow: '0 0 50px rgba(0,0,0,.3)' }}>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <div
+        style={{
+          margin: '0 auto',
+          paddingTop: 0,
+          maxWidth: 1440,
+          boxShadow: '0 0 50px rgba(0,0,0,.3)',
+        }}
+      >
+        {children()}
+        <Footer />
+      </div>
     </div>
   </div>
 )

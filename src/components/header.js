@@ -7,8 +7,6 @@ import bannerImage from '../data/images/banner-image.jpg'
 import navOval from '../data/images/nav-oval.svg'
 import swoop from '../data/images/swoop.png'
 
-
-
 const Banner = styled.div`
   background: no-repeat center url(${bannerImage});
   height: 13rem;
@@ -65,26 +63,44 @@ const Navbar = styled.nav`
   }
 `
 
+const Filler = styled.div`
+  position: absolute;
+  height: 85%;
+  box-shadow: 0px -20px 50px rgba(0, 0, 0, 0.4);
+  width: 1440px;
+  z-index: -130;
+  background-color: rgba(255, 255, 255, 0);
+`
+
 const Header = ({ siteTitle }) => (
   <ThemeProvider theme={theme}>
     <div style={{ position: 'relative', zIndex: '10' }}>
       <Banner>
+        <Filler />
         <MainTitle>{siteTitle}</MainTitle>
         <img src={swoop} alt="" />
       </Banner>
       <Navbar>
         <ul>
           <li>
-            <Link to="/" activeClassName="is-active" exact={true}>Home</Link>
+            <Link to="/" activeClassName="is-active" exact={true}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about" activeClassName="is-active">About</Link>
+            <Link to="/about" activeClassName="is-active">
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/schedule" activeClassName="is-active">Schedule</Link>
+            <Link to="/schedule" activeClassName="is-active">
+              Schedule
+            </Link>
           </li>
           <li>
-            <Link to="/art" activeClassName="is-active">Art</Link>
+            <Link to="/art" activeClassName="is-active">
+              Art
+            </Link>
           </li>
         </ul>
       </Navbar>
