@@ -22,13 +22,13 @@ const AboutSection = styled.div`
   flex: 2;
   padding: 8rem 4rem 4rem 4rem;
   h3 {
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     color: ${props => props.theme.primaryColor};
     font-weight: 300;
   }
   p {
     color: ${props => props.theme.primaryColor};
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     padding: 1rem 0;
     font-size: 1.1rem;

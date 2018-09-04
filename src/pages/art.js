@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const Subtitle = styled.h1`
   margin-top: 130px;
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: ${props => props.theme.primaryColor};
 `

@@ -18,13 +18,13 @@ const Container = styled.div`
 
 const Para = styled.p`
   color: ${props => props.theme.primaryColor};
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8rem;
 `
 
 const Subtitle = styled.h3`
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   color: ${props => props.theme.primaryColor};
   font-weight: 300;
   text-align: center;

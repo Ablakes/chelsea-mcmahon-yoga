@@ -7,7 +7,7 @@ import paintBG from '../data/images/light-paint-bg.jpg'
 
 const Subtitle = styled.h3`
   margin-top: 8rem;
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: ${props => props.theme.primaryColor};
   align-self: center;

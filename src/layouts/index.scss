@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Gabriola';
+  src: url('./gabriola.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700');
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

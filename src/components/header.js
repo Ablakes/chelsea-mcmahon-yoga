@@ -51,7 +51,7 @@ const Navbar = styled.nav`
     }
   }
   a {
-    font-family: lato;
+    font-family: 'Lato', sans-serif;
     text-decoration: none;
     font-weight: 300;
     letter-spacing: 1px;
