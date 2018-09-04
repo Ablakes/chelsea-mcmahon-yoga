@@ -15,7 +15,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <div style={{ boxShadow: '0 0 50px rgba(0,0,0,.3)' }}>
+    <div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
