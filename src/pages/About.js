@@ -16,6 +16,25 @@ const Container = styled.div`
   margin-top: -4.4rem;
 `
 
+const ImageContainer = styled.div`
+  flex: 2;
+  margin: 10rem 0 0 3rem;
+  @media (max-width: 900px) {
+    display: none;
+  }
+`
+
+const AboutContainer = styled.div`
+  flex: 4;
+  padding: 7.4rem 5rem 5rem 5rem;
+  @media (max-width: 775px) {
+    padding: 7.4rem 3rem 3rem;
+  }
+  @media (max-width: 575px) {
+    padding: 7.4rem 1.5rem 1.5rem;
+  }
+`
+
 const Para = styled.p`
   color: ${props => props.theme.primaryColor};
   font-family: 'Lato', sans-serif;
@@ -33,15 +52,10 @@ const Subtitle = styled.h3`
 const AboutPage = () => (
   <ThemeProvider theme={theme}>
     <Container>
-      <div style={{ flex: 2, margin: '10rem 0 0 3rem' }}>
+      <ImageContainer>
         <CrouchImage style={{ flex: 1 }} />
-      </div>
-      <div
-        style={{
-          flex: 4,
-          padding: '7.4rem 5rem 5rem 5rem',
-        }}
-      >
+      </ImageContainer>
+      <AboutContainer>
         <Subtitle>About</Subtitle>
         <hr />
         <Para>
@@ -77,7 +91,7 @@ const AboutPage = () => (
             <Button textContent="HOME" />
           </Link>
         </div>
-      </div>
+      </AboutContainer>
     </Container>
   </ThemeProvider>
 )

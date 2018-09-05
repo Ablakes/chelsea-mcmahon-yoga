@@ -18,16 +18,21 @@ const ImageContainer = styled.div`
 `
 const TabletImg = styled.img`
   max-width: 300px;
+  width: 40%;
   float: left;
-  margin-right: 4rem;
-  margin-bottom: 0;
+  margin: 0 3rem 1rem 0;
+
   border-radius: 5px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
   @media (min-width: 1250px) {
     display: none;
   }
-  @media (max-width: 875px) {
-    display: none;
+  @media (max-width: 835px) {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 350px;
   }
 `
 
@@ -39,6 +44,9 @@ const Container = styled.div`
   margin-top: -4.4rem;
   left: 0;
   z-index: 1;
+  @media (max-width: 835px) {
+    background-size: cover;
+  }
 `
 
 const AboutSection = styled.div`
@@ -56,6 +64,9 @@ const AboutSection = styled.div`
     padding: 1rem 0;
     font-size: 1.1rem;
     line-height: 2rem;
+    @media (max-width: 835px) {
+      padding: 1.5rem 0;
+    }
   }
   a {
     text-decoration: none;
