@@ -14,7 +14,12 @@ const Layout = ({ children, data }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-    />
+    >
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700');
+      </style>
+    </Helmet>
     <div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div

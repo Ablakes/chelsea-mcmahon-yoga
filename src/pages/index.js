@@ -5,8 +5,31 @@ import styled, { ThemeProvider } from 'styled-components'
 import paintBG from '../data/images/light-paint-bg.jpg'
 import theme from '../data/theme'
 
-import CrouchImage from '../components/crouchImage'
+import chelseaCrouch from '../data/images/chelsea-crouch.jpg'
 import Button from '../components/button'
+
+const ImageContainer = styled.div`
+  flex: 1.5;
+  display: flex;
+  align-items: flex-start;
+  @media (max-width: 1250px) {
+    display: none;
+  }
+`
+const TabletImg = styled.img`
+  max-width: 300px;
+  float: left;
+  margin-right: 4rem;
+  margin-bottom: 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+  @media (min-width: 1250px) {
+    display: none;
+  }
+  @media (max-width: 875px) {
+    display: none;
+  }
+`
 
 const Container = styled.div`
   background: no-repeat center url(${paintBG});
@@ -20,7 +43,7 @@ const Container = styled.div`
 
 const AboutSection = styled.div`
   flex: 2;
-  padding: 8rem 4rem 4rem 4rem;
+  padding: 8rem 4rem 0 4rem;
   h3 {
     font-family: 'Lato', sans-serif;
     color: ${props => props.theme.primaryColor};
@@ -37,18 +60,33 @@ const AboutSection = styled.div`
   a {
     text-decoration: none;
   }
+
+  @media (max-width: 1250px) {
+    padding-bottom: 4rem;
+  }
+  @media (max-width: 650px) {
+    padding: 8rem 2rem 2rem 2rem;
+  }
 `
 
 const IndexPage = () => (
   <ThemeProvider theme={theme}>
     <Container>
-      <CrouchImage />
+      <ImageContainer>
+        <img
+          src={chelseaCrouch}
+          style={{
+            marginBottom: 0,
+            borderRadius: '5px',
+            boxShadow: '5px 0px 20px rgba(0,0,0,.2)',
+          }}
+        />
+      </ImageContainer>
       <AboutSection>
         <h3
           style={{
             textAlign: 'center',
             lineHeight: '2rem',
-            fontWeight: 300,
           }}
         >
           <span style={{ fontStyle: 'italic' }}>
@@ -58,7 +96,8 @@ const IndexPage = () => (
           – Lou Reed
         </h3>
         <hr />
-        <p>
+        <TabletImg src={chelseaCrouch} />
+        <p style={{ marginBottom: 0 }}>
           Hi! My name is Chelsea McMahon. I earned my 500hr. RYT at Boundless
           Yoga in Stroudsburg, PA this year. I first tried yoga about … 12 years
           ago in the downstairs of the house I rented when I was a student at

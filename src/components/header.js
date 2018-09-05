@@ -14,6 +14,11 @@ const Banner = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 850px) {
+    img {
+      width: 75%;
+    }
+  }
 `
 const MainTitle = styled.h1`
   padding-top: 2rem;
@@ -24,6 +29,12 @@ const MainTitle = styled.h1`
   color: ${props => props.theme.secondaryColor};
   text-decoration: none;
   margin: 0 !important;
+  @media (max-width: 850px) {
+    font-size: 3rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 2.2rem;
+  }
 `
 
 const Navbar = styled.nav`
@@ -38,6 +49,7 @@ const Navbar = styled.nav`
     justify-content: space-around;
     align-items: center;
     width: 40%;
+    max-width: 650px;
   }
   li {
     list-style-type: none;
@@ -59,6 +71,21 @@ const Navbar = styled.nav`
     color: ${props => props.theme.secondaryColor};
     &:hover {
       border-bottom: 2px solid ${props => props.theme.secondaryColor};
+    }
+  }
+  @media (max-width: 1200px) {
+    ul {
+      width: 70%;
+    }
+  }
+  @media (max-width: 650px) {
+    ul {
+      width: 100%;
+    }
+  }
+  @media (max-width: 650px) {
+    a {
+      font-size: 1rem;
     }
   }
 `
