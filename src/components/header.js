@@ -91,20 +91,10 @@ const Navbar = styled.nav`
   }
 `
 
-const Filler = styled.div`
-  position: absolute;
-  height: 85%;
-  box-shadow: 0px -20px 50px rgba(0, 0, 0, 0.4);
-  width: 1440px;
-  z-index: -130;
-  background-color: rgba(255, 255, 255, 0);
-`
-
 const Header = ({ siteTitle }) => (
   <ThemeProvider theme={theme}>
     <div style={{ position: 'relative', zIndex: '10' }}>
       <Banner>
-        <Filler />
         <MainTitle>{siteTitle}</MainTitle>
         <img src={swoop} alt="" />
       </Banner>
