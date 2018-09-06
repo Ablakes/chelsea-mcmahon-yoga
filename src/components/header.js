@@ -9,7 +9,7 @@ import swoop from '../data/images/swoop.png'
 
 const Banner = styled.div`
   background: no-repeat center url(${bannerImage});
-  height: 13rem;
+  height: 14rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +20,7 @@ const Banner = styled.div`
     }
   }
 `
+
 const MainTitle = styled.h1`
   padding-top: 2rem;
   font-family: Gabriola;
@@ -28,7 +29,7 @@ const MainTitle = styled.h1`
   letter-spacing: 3px;
   color: ${props => props.theme.secondaryColor};
   text-decoration: none;
-  margin: 0 !important;
+  margin: 0;
   @media (max-width: 850px) {
     font-size: 3rem;
   }
@@ -78,12 +79,12 @@ const Navbar = styled.nav`
       width: 70%;
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     ul {
       width: 100%;
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     a {
       font-size: 1rem;
     }
