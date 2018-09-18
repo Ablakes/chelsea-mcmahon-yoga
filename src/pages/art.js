@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Index from './index'
 
 import styled, { ThemeProvider } from 'styled-components'
 import theme from '../data/theme'
@@ -20,12 +21,20 @@ const Subtitle = styled.h1`
   color: ${props => props.theme.primaryColor};
 `
 
-const ArtPage = () => (
-  <ThemeProvider theme={theme}>
-    <Container style={{ height: '70vh' }}>
-      <Subtitle>COMING SOON!</Subtitle>
-    </Container>
-  </ThemeProvider>
-)
-
-export default ArtPage
+export default () => {
+  return (
+    <div>
+      <ThemeProvider theme={theme}>
+        <Container className="slide-in-right" style={{ height: '70vh' }}>
+          <Subtitle>COMING SOON!</Subtitle>
+        </Container>
+      </ThemeProvider>
+      <div
+        style={{ position: 'absolute', top: '333px' }}
+        className="slide-out-left"
+      >
+        <Index />
+      </div>
+    </div>
+  )
+}

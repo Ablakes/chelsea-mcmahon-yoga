@@ -19,6 +19,7 @@ const Container = styled.div`
 const ImageContainer = styled.div`
   flex: 2;
   margin: 10rem 0 0 3rem;
+  max-width: 100%;
   @media (max-width: 900px) {
     display: none;
   }
@@ -27,7 +28,7 @@ const ImageContainer = styled.div`
 const AboutContainer = styled.div`
   flex: 4;
   padding: 7.4rem 5rem 5rem 5rem;
-  @media (max-width: 775px) {
+  @media (max-width: 975px) {
     padding: 7.4rem 3rem 3rem;
   }
   @media (max-width: 575px) {
@@ -45,7 +46,7 @@ const Para = styled.p`
 const Subtitle = styled.h3`
   font-family: 'Lato', sans-serif;
   color: ${props => props.theme.primaryColor};
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 `
 

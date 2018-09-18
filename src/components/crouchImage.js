@@ -13,6 +13,7 @@ const CrouchImage = () => (
     <img
       src={chelseaCrouch}
       style={{
+        maxWidth: '100%',
         marginBottom: 0,
         borderRadius: '5px',
         boxShadow: '5px 0px 20px rgba(0,0,0,.2)',

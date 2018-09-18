@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled, { ThemeProvider } from 'styled-components'
 
@@ -80,50 +80,53 @@ const AboutSection = styled.div`
   }
 `
 
-const IndexPage = () => (
-  <ThemeProvider theme={theme}>
-    <Container>
-      <ImageContainer>
-        <img
-          src={chelseaCrouch}
-          style={{
-            marginBottom: 0,
-            borderRadius: '5px',
-            boxShadow: '5px 0px 20px rgba(0,0,0,.2)',
-          }}
-        />
-      </ImageContainer>
-      <AboutSection>
-        <h3
-          style={{
-            textAlign: 'center',
-            lineHeight: '2rem',
-          }}
-        >
-          <span style={{ fontStyle: 'italic' }}>
-            “She started dancing to that fine-fine music, and her life was saved
-            by Rock-n-Roll.”
-          </span>{' '}
-          – Lou Reed
-        </h3>
-        <hr />
-        <TabletImg src={chelseaCrouch} />
-        <p style={{ marginBottom: 0 }}>
-          Hi! My name is Chelsea McMahon. I earned my 500hr. RYT at Boundless
-          Yoga in Stroudsburg, PA this year. I first tried yoga about … 12 years
-          ago in the downstairs of the house I rented when I was a student at
-          the local university. I’ve always enjoyed movement and grew up
-          dancing, tumbling, hiking like crazy, and riding my bike. I’m also an
-          art freak which has found its way into my practice as well.
-        </p>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Link to="/about/">
-            <Button textContent="READ MORE" />
-          </Link>
-        </div>
-      </AboutSection>
-    </Container>
-  </ThemeProvider>
-)
+//Need to figure out how to have both pages visible so that one can animate out while one animates in
 
-export default IndexPage
+export default () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Container>
+        <ImageContainer>
+          <img
+            src={chelseaCrouch}
+            style={{
+              marginBottom: 0,
+              borderRadius: '5px',
+              boxShadow: '5px 0px 20px rgba(0,0,0,.2)',
+            }}
+          />
+        </ImageContainer>
+        <AboutSection>
+          <h3
+            style={{
+              textAlign: 'center',
+              lineHeight: '2rem',
+            }}
+          >
+            <span style={{ fontStyle: 'italic' }}>
+              “She started dancing to that fine-fine music, and her life was
+              saved by Rock-n-Roll.”
+            </span>{' '}
+            – Lou Reed
+          </h3>
+          <hr />
+          <TabletImg src={chelseaCrouch} />
+          <p style={{ marginBottom: 0 }}>
+            Hi! My name is Chelsea McMahon. I earned my 500hr. RYT at Boundless
+            Yoga in Stroudsburg, PA this year. I first tried yoga about … 12
+            years ago in the downstairs of the house I rented when I was a
+            student at the local university. I’ve always enjoyed movement and
+            grew up dancing, tumbling, hiking like crazy, and riding my bike.
+            I’m also an art freak which has found its way into my practice as
+            well.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Link to="/about/">
+              <Button textContent="READ MORE" />
+            </Link>
+          </div>
+        </AboutSection>
+      </Container>
+    </ThemeProvider>
+  )
+}

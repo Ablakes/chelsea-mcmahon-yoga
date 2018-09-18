@@ -9,7 +9,8 @@ import swoop from '../data/images/swoop.png'
 
 const Banner = styled.div`
   background: no-repeat center url(${bannerImage});
-  height: 14rem;
+  height: 30vh;
+  min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +41,7 @@ const MainTitle = styled.h1`
 
 const Navbar = styled.nav`
   background: no-repeat center url(${navOval});
-  height: 4.4rem;
+  height: 80px;
   display: flex;
   justify-content: center;
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
@@ -56,17 +57,15 @@ const Navbar = styled.nav`
     list-style-type: none;
     margin-bottom: 0;
     backface-visibility: hidden;
-    font-weight: 300;
-
     .is-active {
-      font-weight: 600;
+      font-weight: 900;
       color: white;
     }
   }
   a {
     font-family: 'Lato', sans-serif;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
     font-size: 1.2rem;
     color: ${props => props.theme.secondaryColor};

@@ -3,7 +3,19 @@
   src: url('./gabriola.woff') format('woff'), /* Pretty Modern Browsers */
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,900');
+
+* {
+  box-sizing: inherit;
+}
+
+*:before {
+  box-sizing: inherit;
+}
+
+*:after {
+  box-sizing: inherit;
+}
 
 html {
   font-family: sans-serif;
@@ -14,6 +26,9 @@ html {
 body {
   margin: 0;
   background-color: #000b14;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 article,
@@ -234,21 +249,11 @@ html {
   overflow-y: scroll;
 }
 
-* {
-  box-sizing: inherit;
-}
 
-*:before {
-  box-sizing: inherit;
-}
-
-*:after {
-  box-sizing: inherit;
-}
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Lato', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -662,30 +667,6 @@ thead {
   text-align: left;
 }
 
-td,
-th {
-  text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
-  -moz-font-feature-settings: "tnum";
-  -ms-font-feature-settings: "tnum";
-  -webkit-font-feature-settings: "tnum";
-  padding-left: 0.96667rem;
-  padding-right: 0.96667rem;
-  padding-top: 0.725rem;
-  padding-bottom: calc(0.725rem - 1px);
-}
-
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
@@ -717,6 +698,10 @@ pre tt:after {
   content: "";
 }
 
+
+/********** START MY CSS **********/
+
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -730,3 +715,146 @@ pre tt:after {
   }
 }
 
+ .forward {
+  animation: slideIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-20rem, 0, 500rem);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slide-in-right {
+  animation: slide-in-right .5s forwards;
+}
+.slide-in-left {
+  animation: slide-in-left .5s forwards;
+}
+
+.slide-out-left {
+  animation: slide-out-left .7s forwards;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(70vw);
+    opacity: 0;
+  }
+  80% {
+   transform: translateX(0);
+  }
+  100% {
+   transform: translateX(0);
+    opacity: 1;
+  }
+ }
+
+ @keyframes slide-in-left {
+  0% {
+    transform: translateX(-70vw);
+    opacity: 0;
+  }
+  80% {
+   transform: translateX(0);
+  }
+  100% {
+   transform: translateX(0);
+    opacity: 1;
+  }
+ }
+
+ @keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+ }
+
+
+td,
+th {
+  text-align: left;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  font-feature-settings: "tnum";
+  -moz-font-feature-settings: "tnum";
+  -ms-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  padding-left: 0.96667rem;
+  padding-right: 0.96667rem;
+  padding-top: 0.725rem;
+  padding-bottom: calc(0.725rem - 1px);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+  color: #014e92b4;
+}
+
+
+
+// SCHEDULE
+
+.schedule-container {
+  display: flex;
+}
+
+.main-calendar-container {
+  margin: 40px;
+  position: relative;
+  display: flex;
+  max-width: 450px;
+  height: 380px;
+  overflow: hidden;
+}
+
+.month-container {
+  // this is called "Container" in Month styled-components
+  max-height: 400px;
+}
+
+.schedule-text {
+  padding: 4rem;
+  width: 50vw;
+}
+
+.month-title {
+  margin: 0;
+  text-align: right;
+  width: 100%;
+}
+
+.coming-soon {
+ margin-top: 100px;
+ width: 380px;
+ text-align: center;
+}
+
+.calendar-btn {
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.calendar-btn-right{
+  left: 50px;
+}
