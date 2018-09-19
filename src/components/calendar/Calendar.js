@@ -11,7 +11,7 @@ export default class Calendar extends Component {
   }
 
   state = {
-    month: 9,
+    month: currentMonth,
     totalMonths: 12,
     currentMonth: currentMonth,
     animation: '',
