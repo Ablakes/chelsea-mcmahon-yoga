@@ -2,15 +2,22 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  background: linear-gradient(to bottom, #f2fcfe, #014e92b4);
+  background: linear-gradient(to bottom, #f2fcfe, #4a97dbb4);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+  max-width: 472px;
 `
 
 const CalendarTable = styled.table``
 
-const CalendarDay = styled.td``
+const CalendarDay = styled.td`
+  text-align: center;
+  width: 60px;
+  height: 60px;
+`
 
 const SelectedCalendarDay = styled.td`
-  background-color: #014e92b4;
   color: #f2fcfe;
 `
 
@@ -21,6 +28,8 @@ export default ({ date, classDates }) => {
   }`
   const first = dateObj.getDay()
   const length = new Date(date[1], date[0], 0).getDate()
+  const currentDay = new Date().getDate()
+  const currentMonth = new Date().getMonth() + 1
 
   const days = []
   let requiredLength = length + first
@@ -44,14 +53,35 @@ export default ({ date, classDates }) => {
   }
 
   const renderDays = (day, index) => {
-    if (classDates.includes(day)) {
-      return <SelectedCalendarDay key={index}>{day}</SelectedCalendarDay>
+    if (
+      classDates.includes(day) &&
+      day === currentDay &&
+      date[0] === currentMonth
+    ) {
+      return (
+        <SelectedCalendarDay className="current-day" key={index}>
+          <div className="selected-day-wrapper ">{day}</div>
+        </SelectedCalendarDay>
+      )
+    } else if (classDates.includes(day)) {
+      return (
+        <SelectedCalendarDay key={index}>
+          <div className="selected-day-wrapper ">{day}</div>
+        </SelectedCalendarDay>
+      )
+    } else if (day === currentDay && date[0] === currentMonth) {
+      return (
+        <CalendarDay key={index} className="current-day">
+          {day}
+        </CalendarDay>
+      )
+    } else {
+      return <CalendarDay key={index}>{day}</CalendarDay>
     }
-    return <CalendarDay key={index}>{day}</CalendarDay>
   }
 
   return (
-    <Container className="month-container">
+    <Container>
       <h3 className="month-title">{monthName}</h3>
       <CalendarTable>
         <tbody>

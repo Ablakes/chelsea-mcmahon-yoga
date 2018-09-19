@@ -32,44 +32,45 @@ export default class Calendar extends Component {
   }
 
   render() {
+    const { month, currentMonth, totalMonths, animation } = this.state
     return (
       <div>
         <div className="main-calendar-container">
           <button
             className="calendar-btn calendar-btn-left"
-            disabled={this.state.month === this.state.currentMonth}
+            disabled={month === currentMonth}
             onClick={this.handleLeftClick}
           >
             &#60;
           </button>
           <button
             className="calendar-btn calendar-btn-right"
-            disabled={this.state.month > this.state.totalMonths}
+            disabled={month > totalMonths}
             onClick={this.handleRightClick}
           >
             &#62;
           </button>
-          {this.state.month === 9 && (
-            <div className={this.state.animation}>
-              <Month date={[9, 2018]} classDates={[1, 6, 10, 18, 30]} />
+          {month === 9 && (
+            <div className={animation}>
+              <Month date={[9, 2018]} classDates={[1, 6, 10, 11, 12, 13, 30]} />
             </div>
           )}
-          {this.state.month === 10 && (
-            <div className={this.state.animation}>
+          {month === 10 && (
+            <div className={animation}>
               <Month date={[10, 2018]} classDates={[1, 6, 10, 18, 30]} />
             </div>
           )}
-          {this.state.month === 11 && (
-            <div className={this.state.animation}>
+          {month === 11 && (
+            <div className={animation}>
               <Month date={[11, 2018]} classDates={[1, 6, 10, 18, 30]} />
             </div>
           )}
-          {this.state.month === 12 && (
-            <div className={this.state.animation}>
+          {month === 12 && (
+            <div className={animation}>
               <Month date={[12, 2018]} classDates={[]} />
             </div>
           )}
-          {this.state.totalMonths < this.state.month && (
+          {totalMonths < month && (
             <h3 className="slide-in-right coming-soon">Coming Soon!</h3>
           )}
         </div>
