@@ -9,8 +9,6 @@ const Container = styled.div`
   max-width: 472px;
 `
 
-const CalendarTable = styled.table``
-
 const CalendarDay = styled.td`
   text-align: center;
   width: 60px;
@@ -80,10 +78,16 @@ export default ({ date, classDates }) => {
     }
   }
 
+  const renderWeeks = (startDate, endDate) => {
+    return days
+      .slice(startDate, endDate)
+      .map((day, index) => renderDays(day, index))
+  }
+
   return (
     <Container>
       <h3 className="month-title">{monthName}</h3>
-      <CalendarTable>
+      <table>
         <tbody>
           <tr>
             <th>S</th>
@@ -94,30 +98,14 @@ export default ({ date, classDates }) => {
             <th>F</th>
             <th>S</th>
           </tr>
-          <tr>
-            {days.slice(0, 7).map((day, index) => renderDays(day, index))}
-          </tr>
-          <tr>
-            {days.slice(7, 14).map((day, index) => renderDays(day, index))}
-          </tr>
-          <tr>
-            {days.slice(14, 21).map((day, index) => renderDays(day, index))}
-          </tr>
-          <tr>
-            {days.slice(21, 28).map((day, index) => renderDays(day, index))}
-          </tr>
-          {days.length > 28 ? (
-            <tr>
-              {days.slice(28, 35).map((day, index) => renderDays(day, index))}
-            </tr>
-          ) : null}
-          {days.length > 35 ? (
-            <tr>
-              {days.slice(35, 42).map((day, index) => renderDays(day, index))}
-            </tr>
-          ) : null}
+          <tr>{renderWeeks(0, 7)}</tr>
+          <tr>{renderWeeks(7, 14)}</tr>
+          <tr>{renderWeeks(14, 21)}</tr>
+          <tr>{renderWeeks(21, 28)}</tr>
+          {days.length > 28 ? <tr>{renderWeeks(28, 35)}</tr> : null}
+          {days.length > 35 ? <tr>{renderWeeks(35, 42)}</tr> : null}
         </tbody>
-      </CalendarTable>
+      </table>
     </Container>
   )
 }
