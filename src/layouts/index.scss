@@ -5,6 +5,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,900');
 
+$primary-color: #001527;
+$secondaryColor: #FFF6E6;
+
 * {
   box-sizing: inherit;
 }
@@ -29,6 +32,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
 }
 
 article,
@@ -272,7 +278,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -283,7 +289,7 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -301,7 +307,7 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -336,7 +342,7 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -354,7 +360,7 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -372,7 +378,7 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -390,7 +396,7 @@ hgroup {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 ul {
@@ -401,7 +407,7 @@ ul {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -414,7 +420,7 @@ ol {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -427,7 +433,7 @@ dl {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 dd {
@@ -438,7 +444,7 @@ dd {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 p {
@@ -449,7 +455,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 
 figure {
@@ -460,7 +466,7 @@ figure {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 pre {
@@ -471,7 +477,7 @@ pre {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   font-size: 0.85rem;
   line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
@@ -489,7 +495,7 @@ pre {
 //   padding-left: 0;
 //   padding-right: 0;
 //   padding-top: 0;
-//   margin-bottom: 1.45rem;
+//   margin-bottom: 0;
 //   font-size: 1rem;
 //   line-height: 1.45rem;
 //   border-collapse: collapse;
@@ -504,7 +510,7 @@ fieldset {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 blockquote {
@@ -515,7 +521,7 @@ blockquote {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 form {
@@ -526,7 +532,7 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 noscript {
@@ -537,7 +543,7 @@ noscript {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 iframe {
@@ -548,7 +554,7 @@ iframe {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 hr {
@@ -573,7 +579,7 @@ address {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 b {
@@ -798,94 +804,36 @@ pre tt:after {
 //   padding-bottom: calc(0.725rem - 1px);
 // }
 
-td, th {
-  text-align: center;
-}
 
-th {
-  font-size: 1.2rem;
-  padding: 15px 0;
-  color: #535f69;
-}
 // SCHEDULE
-
-.schedule-container {
-  display: flex;
-}
-
-.main-calendar-container {
-  display: flex;
-  justify-content: center;
-  min-height: 520px;
-  margin: 40px;
-  min-width: 550px;
-  position: relative;
-  overflow-x: hidden;
-}
 
 .schedule-text {
   padding: 4rem;
   width: 50vw;
 }
 
-.month-title {
-  margin: 0;
-  text-align: right;
-  width: 100%;
+.mapouter {
+  margin: 35px 50px 0 0;
+  @media (max-width: 1000px){
+    margin-right: 20px;
+  }
+}
+
+.address {
+  font-weight: 900;
 }
 
 .coming-soon {
- margin-top: 100px;
- width: 380px;
- text-align: center;
-}
-
-.calendar-btn {
-  font-size: 60px;
-  transition: all .2s;
-  background-color: rgba(0,0,0,0);
-  border: none;
-  height: 40px;
-  width: 40px;
-  height: 2rem;
-  position: absolute;
-  top: 0;
-  margin: 15px;
-  z-index: 100;
-  outline: none;
-  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.308);
-}
-
-.calendar-btn:hover {
-  transform: translateY(-1px);
-}
-
-.calendar-btn:active {
-  transform: translateY(0);
-}
-
-.calendar-btn-right{
-  left: 95px;
-}
-
-.calendar-btn-left{
-  left: 55px;
-}
-
-.selected-day-wrapper{
-  background-color: #001527;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  width: 40px;
-  height: 40px;
+  padding-top: 150px;
+  height: 400px;
+  text-align: center;
+  width: 450px;
+  border-radius: 7px;
+  color: $primary-color;
+  background-image: linear-gradient(166deg, #dff1ff 5%, #8cbce4 100%);
   text-align: center;
 }
 
-.current-day {
-  border: 4px solid rgb(219, 111, 104);
-  position: relative;
-  border-radius: 5px;
+td:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.03);
 }
-

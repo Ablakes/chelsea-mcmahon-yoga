@@ -1,7 +1,73 @@
 import React, { Component } from 'react'
 import Month from './Month'
+import styled from 'styled-components'
 
 const currentMonth = new Date().getMonth() + 1
+
+const CalendarContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  min-height: 530px;
+  margin: 25px 40px;
+  min-width: 580px;
+  position: relative;
+  overflow-x: hidden;
+  @media (max-width: 1250px) {
+    min-width: 500px;
+    margin: 25px 10px 25px 40px;
+  }
+  @media (max-width: 1000px) {
+    margin: 25px 0;
+  }
+  @media (max-width: 480px) {
+    min-width: 0;
+  }
+`
+
+const ButtonWrapper = styled.div`
+  width: 472px;
+  position: absolute;
+  @media (max-width: 480px) {
+    width: 105vw;
+  }
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  align-items: center;
+  left: 40px;
+`
+
+const CalendarBtn = styled.button`
+  font-size: 60px;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff6e6;
+  border: none;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  z-index: 100;
+  outline: none;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.308);
+  &:hover {
+    font-size: 66px;
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+  &:disabled {
+    color: #b4b4b4;
+  }
+  &:disabled:hover {
+    font-size: 60px;
+    transform: translateY(0);
+  }
+`
 
 export default class Calendar extends Component {
   constructor() {
@@ -67,21 +133,23 @@ export default class Calendar extends Component {
 
     return (
       <div>
-        <div className="main-calendar-container">
-          <button
-            className="calendar-btn calendar-btn-left"
-            disabled={currentScheduleIndex === 0}
-            onClick={this.handleLeftClick}
-          >
-            &#60;
-          </button>
-          <button
-            className="calendar-btn calendar-btn-right"
-            disabled={currentScheduleIndex === schedule.length}
-            onClick={this.handleRightClick}
-          >
-            &#62;
-          </button>
+        <CalendarContainer>
+          <ButtonWrapper>
+            <ButtonContainer>
+              <CalendarBtn
+                disabled={currentScheduleIndex === 0}
+                onClick={this.handleLeftClick}
+              >
+                &#60;
+              </CalendarBtn>
+              <CalendarBtn
+                disabled={currentScheduleIndex === schedule.length}
+                onClick={this.handleRightClick}
+              >
+                &#62;
+              </CalendarBtn>
+            </ButtonContainer>
+          </ButtonWrapper>
           {schedule.map((month, index) => {
             return (
               <div key={index}>
@@ -100,7 +168,7 @@ export default class Calendar extends Component {
           {currentScheduleIndex === schedule.length && (
             <h3 className="slide-in-right coming-soon">Coming Soon!</h3>
           )}
-        </div>
+        </CalendarContainer>
       </div>
     )
   }

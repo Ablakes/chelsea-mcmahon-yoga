@@ -2,21 +2,87 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  background: linear-gradient(to bottom, #f2fcfe, #4a97dbb4);
-  padding: 1rem;
+  background-image: linear-gradient(166deg, #dff1ff 5%, #8cbce4 100%);
   border-radius: 5px;
   box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
-  max-width: 472px;
+`
+
+const MonthTitle = styled.h3`
+  margin: 0;
+  border-radius: 7px 7px 0 0;
+  padding: 22px 15px 22px 0;
+  text-align: right;
+  width: 100%;
+  background-image: linear-gradient(-180deg, #315f8c 0%, #163859 100%);
+  color: #fff6e6;
+  height: 78px;
+`
+
+const CalendarHeading = styled.th`
+  border-top: 1px solid rgba(255, 246, 230, 0.363);
+  background-image: linear-gradient(-180deg, #163859 0%, #021426 100%);
+  color: #fff6e6;
+  font-size: 1.2rem;
+  padding: 15px 0;
+  font-weight: 400;
 `
 
 const CalendarDay = styled.td`
   text-align: center;
-  width: 60px;
+  width: 70px;
   height: 60px;
+  font-weight: 700;
+  @media (max-width: 1250px) {
+    width: 65px;
+  }
+  @media (max-width: 620px) {
+    width: 60px;
+  }
 `
 
 const SelectedCalendarDay = styled.td`
   color: #f2fcfe;
+  font-weight: 700;
+  text-align: center;
+`
+const SelectedDayIndicator = styled.div`
+  background-image: linear-gradient(-180deg, #163859 0%, #021426 100%);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+`
+
+const CurrentDay = styled.div`
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 60px;
+  width: 70px;
+  font-weight: 700;
+  position: relative;
+  &::after {
+    content: '';
+    font-weight: 400;
+    display: block;
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  @media (max-width: 1250px) {
+    width: 65px;
+  }
+  @media (max-width: 620px) {
+    width: 60px;
+  }
 `
 
 export default ({ date, classDates }) => {
@@ -58,19 +124,21 @@ export default ({ date, classDates }) => {
     ) {
       return (
         <SelectedCalendarDay className="current-day" key={index}>
-          <div className="selected-day-wrapper ">{day}</div>
+          <CurrentDay key={index} className="current-day">
+            <SelectedDayIndicator>{day}</SelectedDayIndicator>
+          </CurrentDay>
         </SelectedCalendarDay>
       )
     } else if (classDates.includes(day)) {
       return (
         <SelectedCalendarDay key={index}>
-          <div className="selected-day-wrapper ">{day}</div>
+          <SelectedDayIndicator>{day}</SelectedDayIndicator>
         </SelectedCalendarDay>
       )
     } else if (day === currentDay && date[0] === currentMonth) {
       return (
-        <CalendarDay key={index} className="current-day">
-          {day}
+        <CalendarDay key={index}>
+          <CurrentDay className="current-day">{day}</CurrentDay>
         </CalendarDay>
       )
     } else {
@@ -85,27 +153,29 @@ export default ({ date, classDates }) => {
   }
 
   return (
-    <Container>
-      <h3 className="month-title">{monthName}</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th>S</th>
-            <th>M</th>
-            <th>T</th>
-            <th>W</th>
-            <th>Th</th>
-            <th>F</th>
-            <th>S</th>
-          </tr>
-          <tr>{renderWeeks(0, 7)}</tr>
-          <tr>{renderWeeks(7, 14)}</tr>
-          <tr>{renderWeeks(14, 21)}</tr>
-          <tr>{renderWeeks(21, 28)}</tr>
-          {days.length > 28 ? <tr>{renderWeeks(28, 35)}</tr> : null}
-          {days.length > 35 ? <tr>{renderWeeks(35, 42)}</tr> : null}
-        </tbody>
-      </table>
-    </Container>
+    <div>
+      <MonthTitle>{monthName}</MonthTitle>
+      <Container>
+        <table cellSpacing="0" cellPadding="0">
+          <tbody>
+            <tr>
+              <CalendarHeading>S</CalendarHeading>
+              <CalendarHeading>M</CalendarHeading>
+              <CalendarHeading>T</CalendarHeading>
+              <CalendarHeading>W</CalendarHeading>
+              <CalendarHeading>Th</CalendarHeading>
+              <CalendarHeading>F</CalendarHeading>
+              <CalendarHeading>S</CalendarHeading>
+            </tr>
+            <tr>{renderWeeks(0, 7)}</tr>
+            <tr>{renderWeeks(7, 14)}</tr>
+            <tr>{renderWeeks(14, 21)}</tr>
+            <tr>{renderWeeks(21, 28)}</tr>
+            {days.length > 28 ? <tr>{renderWeeks(28, 35)}</tr> : null}
+            {days.length > 35 ? <tr>{renderWeeks(35, 42)}</tr> : null}
+          </tbody>
+        </table>
+      </Container>
+    </div>
   )
 }
