@@ -5,8 +5,7 @@ export default () => {
     <div className="mapouter">
       <div className="gmap_canvas">
         <iframe
-          width="400"
-          height="400"
+          className="map-iframe"
           id="gmap_canvas"
           src="https://maps.google.com/maps?q=52%20Main%20Street.%20Delaware%20Water%20Gap%2C%20PA.%2018327&t=&z=13&ie=UTF8&iwloc=&output=embed"
           frameBorder="0"

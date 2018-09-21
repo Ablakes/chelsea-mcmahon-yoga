@@ -817,22 +817,24 @@ pre tt:after {
   @media (max-width: 1000px){
     margin-right: 20px;
   }
+  @media (max-width: 830px){
+    margin-right: 0;
+    max-width: 95vw;
+  }
+}
+
+.map-iframe {
+  height: 400px;
+  width: 400px;
+  @media(max-width: 450px){
+    width: 90vw;
+  }
 }
 
 .address {
   font-weight: 900;
 }
 
-.coming-soon {
-  padding-top: 150px;
-  height: 400px;
-  text-align: center;
-  width: 450px;
-  border-radius: 7px;
-  color: $primary-color;
-  background-image: linear-gradient(166deg, #dff1ff 5%, #8cbce4 100%);
-  text-align: center;
-}
 
 td:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.03);

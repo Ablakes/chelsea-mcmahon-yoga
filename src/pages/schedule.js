@@ -49,6 +49,7 @@ const CalendarKeyCircle = styled.span`
 `
 
 const ScheduleParagraphContainer = styled.div`
+  color: #001527;
   padding: 1rem 0 3rem 3rem;
   font-size: 1.1rem;
   @media (max-width: 1250px) {
@@ -56,6 +57,9 @@ const ScheduleParagraphContainer = styled.div`
   }
   @media (max-width: 1000px) {
     padding: 0 4rem 2rem 4rem;
+  }
+  @media (max-width: 480px) {
+    padding: 0 2rem 2rem 2rem;
   }
 `
 
@@ -76,7 +80,6 @@ const PhoneNumber = styled.p`
 `
 
 const MapContainer = styled.div`
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   @media (max-width: 830px) {

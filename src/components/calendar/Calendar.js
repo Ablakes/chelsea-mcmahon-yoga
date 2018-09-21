@@ -18,6 +18,7 @@ const CalendarContainer = styled.div`
   }
   @media (max-width: 1000px) {
     margin: 25px 0;
+    min-height: 430;
   }
   @media (max-width: 480px) {
     min-width: 0;
@@ -25,8 +26,11 @@ const CalendarContainer = styled.div`
 `
 
 const ButtonWrapper = styled.div`
-  width: 472px;
+  width: 100%;
   position: absolute;
+  @media (max-width: 1000px) {
+    width: 472px;
+  }
   @media (max-width: 480px) {
     width: 105vw;
   }
@@ -39,6 +43,9 @@ const ButtonContainer = styled.div`
   position: absolute;
   align-items: center;
   left: 40px;
+  @media (max-width: 480px) {
+    left: 9vw;
+  }
 `
 
 const CalendarBtn = styled.button`
@@ -47,12 +54,13 @@ const CalendarBtn = styled.button`
   background-color: rgba(0, 0, 0, 0);
   color: #fff6e6;
   border: none;
-  height: 40px;
-  width: 40px;
   top: 0;
   z-index: 100;
   outline: none;
   text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.308);
+  @media (max-width: 480px) {
+    padding: 0;
+  }
   &:hover {
     font-size: 66px;
     transform: translateY(-1px);
@@ -67,6 +75,17 @@ const CalendarBtn = styled.button`
     font-size: 60px;
     transform: translateY(0);
   }
+`
+
+const ComingSoon = styled.h3`
+  padding-top: 150px;
+  height: 430px;
+  text-align: center;
+  width: 450px;
+  border-radius: 7px;
+  color: $primary-color;
+  background-image: linear-gradient(166deg, #dff1ff 5%, #8cbce4 100%);
+  text-align: center;
 `
 
 export default class Calendar extends Component {
@@ -166,7 +185,7 @@ export default class Calendar extends Component {
             )
           })}
           {currentScheduleIndex === schedule.length && (
-            <h3 className="slide-in-right coming-soon">Coming Soon!</h3>
+            <ComingSoon className={animation}>Coming Soon!</ComingSoon>
           )}
         </CalendarContainer>
       </div>
