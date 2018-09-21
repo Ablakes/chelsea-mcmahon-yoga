@@ -30,7 +30,6 @@ const ButtonWrapper = styled.div`
   position: absolute;
   @media (max-width: 1000px) {
     width: 472px;
-  }
   @media (max-width: 480px) {
     width: 105vw;
   }
@@ -42,7 +41,10 @@ const ButtonContainer = styled.div`
   height: 70px;
   position: absolute;
   align-items: center;
-  left: 40px;
+  left: 60px;
+  @media (max-width: 1200px) {
+    left: 45px;
+  }
   @media (max-width: 480px) {
     left: 9vw;
   }
