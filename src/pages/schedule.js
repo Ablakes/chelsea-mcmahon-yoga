@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import theme from '../data/theme'
 
 import paintBG from '../data/images/light-paint-bg.jpg'
+import paintBGPortrait from '../data/images/paint-bg-portrait.jpg'
 import GoogleMap from '../components/googleMap'
 
 import Calendar from '../components/calendar/Calendar'
@@ -23,6 +24,10 @@ const Container = styled.div`
   background-size: cover;
   margin-top: -4.4rem;
   padding-bottom: 4.4rem;
+  @media (max-aspect-ratio: 3/2) {
+    background: no-repeat url(${paintBGPortrait});
+    background-size: cover;
+  }
 `
 const ScheduleContainer = styled.div`
   display: flex;

@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import styled, { ThemeProvider } from 'styled-components'
 
 import paintBG from '../data/images/light-paint-bg.jpg'
+import paintBGPortrait from '../data/images/paint-bg-portrait.jpg'
 import theme from '../data/theme'
 
 import chelseaCrouch from '../data/images/chelsea-crouch.jpg'
@@ -45,6 +46,10 @@ const Container = styled.div`
   left: 0;
   z-index: 1;
   @media (max-width: 835px) {
+    background-size: cover;
+  }
+  @media (max-aspect-ratio: 3/2) {
+    background: no-repeat url(${paintBGPortrait});
     background-size: cover;
   }
 `

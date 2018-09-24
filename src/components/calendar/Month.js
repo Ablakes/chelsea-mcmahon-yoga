@@ -43,6 +43,9 @@ const CalendarDay = styled.td`
     height: 55px;
     width: 55px;
   }
+  @media (max-width: 390px) {
+    width: 50px;
+  }
 `
 
 const SelectedCalendarDay = styled.td`
@@ -53,6 +56,9 @@ const SelectedCalendarDay = styled.td`
     font-size: 0.9rem;
     height: 55px;
     width: 55px;
+  }
+  @media (max-width: 390px) {
+    width: 50px;
   }
 `
 const SelectedDayIndicator = styled.div`
@@ -97,6 +103,9 @@ const CurrentDay = styled.div`
     font-size: 0.9rem;
     height: 55px;
     width: 55px;
+  }
+  @media (max-width: 390px) {
+    width: 50px;
   }
 `
 

@@ -7,7 +7,6 @@ const currentMonth = new Date().getMonth() + 1
 const CalendarContainer = styled.div`
   display: flex;
   justify-content: center;
-
   margin: 25px 40px;
   min-width: 580px;
   position: relative;

@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 import CrouchImage from '../components/crouchImage'
 import Button from '../components/button'
 import paintBG from '../data/images/light-paint-bg.jpg'
+import paintBGPortrait from '../data/images/paint-bg-portrait.jpg'
 
 import theme from '../data/theme'
 
@@ -14,6 +15,10 @@ const Container = styled.div`
   background: no-repeat url(${paintBG});
   background-size: cover;
   margin-top: -4.4rem;
+  @media (max-aspect-ratio: 3/2) {
+    background: no-repeat url(${paintBGPortrait});
+    background-size: cover;
+  }
 `
 
 const ImageContainer = styled.div`
