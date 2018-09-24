@@ -7,11 +7,10 @@ const currentMonth = new Date().getMonth() + 1
 const CalendarContainer = styled.div`
   display: flex;
   justify-content: center;
-  min-height: 530px;
+
   margin: 25px 40px;
   min-width: 580px;
   position: relative;
-  overflow-x: hidden;
   @media (max-width: 1250px) {
     min-width: 500px;
     margin: 25px 10px 25px 40px;
@@ -46,7 +45,7 @@ const ButtonContainer = styled.div`
     left: 45px;
   }
   @media (max-width: 480px) {
-    left: 9vw;
+    left: 10vw;
   }
 `
 
@@ -54,7 +53,7 @@ const CalendarBtn = styled.button`
   font-size: 60px;
   transition: all 0.2s;
   background-color: rgba(0, 0, 0, 0);
-  color: #fff6e6;
+  color: ${props => props.theme.secondaryColor};
   border: none;
   top: 0;
   z-index: 100;
@@ -79,15 +78,21 @@ const CalendarBtn = styled.button`
   }
 `
 
-const ComingSoon = styled.h3`
-  padding-top: 150px;
+const ComingSoon = styled.div`
+  animation: fade-in 0.5s forwards;
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
   height: 430px;
   text-align: center;
-  width: 450px;
+  width: 490px;
   border-radius: 7px;
   color: $primary-color;
   background-image: linear-gradient(166deg, #dff1ff 5%, #8cbce4 100%);
   text-align: center;
+`
+
+const ComingSoonH3 = styled.h3`
+  animation: slide-in-bottom 0.5s forwards;
+  padding-top: 35%;
 `
 
 export default class Calendar extends Component {
@@ -99,7 +104,6 @@ export default class Calendar extends Component {
 
   state = {
     currentScheduleIndex: 0,
-    animation: '',
     schedule: [
       {
         date: [9, 2018],
@@ -138,19 +142,17 @@ export default class Calendar extends Component {
   handleLeftClick() {
     this.setState(prevState => ({
       currentScheduleIndex: (prevState.currentScheduleIndex -= 1),
-      animation: 'slide-in-left',
     }))
   }
 
   handleRightClick() {
     this.setState(prevState => ({
       currentScheduleIndex: (prevState.currentScheduleIndex += 1),
-      animation: 'slide-in-right',
     }))
   }
 
   render() {
-    const { currentScheduleIndex, animation, schedule } = this.state
+    const { currentScheduleIndex, schedule } = this.state
 
     return (
       <div>
@@ -176,18 +178,18 @@ export default class Calendar extends Component {
               <div key={index}>
                 {schedule.indexOf(month) ===
                   this.state.currentScheduleIndex && (
-                  <div className={animation}>
-                    <Month
-                      date={[month.date[0], month.date[1]]}
-                      classDates={month.classDates}
-                    />
-                  </div>
+                  <Month
+                    date={[month.date[0], month.date[1]]}
+                    classDates={month.classDates}
+                  />
                 )}
               </div>
             )
           })}
           {currentScheduleIndex === schedule.length && (
-            <ComingSoon className={animation}>Coming Soon!</ComingSoon>
+            <ComingSoon>
+              <ComingSoonH3>Coming Soon!</ComingSoonH3>
+            </ComingSoon>
           )}
         </CalendarContainer>
       </div>

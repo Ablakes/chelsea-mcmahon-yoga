@@ -38,12 +38,22 @@ const CalendarDay = styled.td`
   @media (max-width: 620px) {
     width: 60px;
   }
+  @media (max-width: 450px) {
+    font-size: 0.9rem;
+    height: 55px;
+    width: 55px;
+  }
 `
 
 const SelectedCalendarDay = styled.td`
   color: #f2fcfe;
   font-weight: 700;
   text-align: center;
+  @media (max-width: 450px) {
+    font-size: 0.9rem;
+    height: 55px;
+    width: 55px;
+  }
 `
 const SelectedDayIndicator = styled.div`
   background-image: linear-gradient(-180deg, #163859 0%, #021426 100%);
@@ -82,6 +92,11 @@ const CurrentDay = styled.div`
   }
   @media (max-width: 620px) {
     width: 60px;
+  }
+  @media (max-width: 450px) {
+    font-size: 0.9rem;
+    height: 55px;
+    width: 55px;
   }
 `
 

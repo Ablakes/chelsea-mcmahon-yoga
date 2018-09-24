@@ -721,39 +721,10 @@ pre tt:after {
   }
 }
 
- .forward {
-  animation: slideIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translate3d(-20rem, 0, 500rem);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slide-in-right {
-  animation: slide-in-right .5s forwards;
-}
-.slide-in-left {
-  animation: slide-in-left .5s forwards;
-}
-
-.slide-out-left {
-  animation: slide-out-left .7s forwards;
-}
-
-@keyframes slide-in-right {
+@keyframes slide-in-bottom {
   0% {
-    transform: translateX(70vw);
     opacity: 0;
-  }
-  80% {
-   transform: translateX(0);
+    transform: translateY(30%);
   }
   100% {
    transform: translateX(0);
@@ -761,80 +732,17 @@ pre tt:after {
   }
  }
 
- @keyframes slide-in-left {
+
+@keyframes fade-in {
   0% {
-    transform: translateX(-70vw);
     opacity: 0;
   }
-  80% {
-   transform: translateX(0);
-  }
   100% {
-   transform: translateX(0);
     opacity: 1;
   }
  }
-
- @keyframes slide-out-left {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  80% {
-    transform: translateX(-100vw);
-  }
-  100% {
-    transform: translateX(-100vw);
-    opacity: 0;
-  }
- }
-
-
-// td,
-// th {
-//   text-align: left;
-//   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-//   font-feature-settings: "tnum";
-//   -moz-font-feature-settings: "tnum";
-//   -ms-font-feature-settings: "tnum";
-//   -webkit-font-feature-settings: "tnum";
-//   padding-left: 0.96667rem;
-//   padding-right: 0.96667rem;
-//   padding-top: 0.725rem;
-//   padding-bottom: calc(0.725rem - 1px);
-// }
-
 
 // SCHEDULE
-
-.schedule-text {
-  padding: 4rem;
-  width: 50vw;
-}
-
-.mapouter {
-  margin: 35px 50px 0 0;
-  @media (max-width: 1000px){
-    margin-right: 20px;
-  }
-  @media (max-width: 830px){
-    margin-right: 0;
-    max-width: 95vw;
-  }
-}
-
-.map-iframe {
-  height: 400px;
-  width: 400px;
-  @media(max-width: 450px){
-    width: 90vw;
-  }
-}
-
-.address {
-  font-weight: 900;
-}
-
 
 td:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.03);

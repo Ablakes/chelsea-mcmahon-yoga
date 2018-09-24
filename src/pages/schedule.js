@@ -49,17 +49,17 @@ const CalendarKeyCircle = styled.span`
 `
 
 const ScheduleParagraphContainer = styled.div`
-  color: #001527;
-  padding: 1rem 0 3rem 3rem;
+  color: ${props => props.theme.primaryColor};
+  padding: 1rem 0 3rem 5rem;
   font-size: 1.1rem;
   @media (max-width: 1250px) {
     font-size: 1rem;
   }
   @media (max-width: 1000px) {
-    padding: 0 4rem 2rem 4rem;
+    padding: 2rem 4rem 2rem 4rem;
   }
   @media (max-width: 480px) {
-    padding: 0 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 `
 
@@ -149,7 +149,7 @@ const Schedule = () => (
           <GoogleMap className="google-map" />
           <AddressContainer>
             <p>All Classes are held at Chataeu 52:</p>
-            <p className="address">
+            <p style={{ fontWeight: 900 }}>
               52 Main St,<br /> Delaware Water Gap, PA 18327
             </p>
           </AddressContainer>

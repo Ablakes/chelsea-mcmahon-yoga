@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Index from './index'
 
 import styled, { ThemeProvider } from 'styled-components'
 import theme from '../data/theme'
@@ -15,7 +14,7 @@ const Container = styled.div`
 `
 
 const Subtitle = styled.h1`
-  margin-top: 130px;
+  margin-top: 230px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: ${props => props.theme.primaryColor};
@@ -25,16 +24,10 @@ export default () => {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Container className="slide-in-right" style={{ height: '70vh' }}>
+        <Container style={{ height: '70vh' }}>
           <Subtitle>COMING SOON!</Subtitle>
         </Container>
       </ThemeProvider>
-      <div
-        style={{ position: 'absolute', top: '333px' }}
-        className="slide-out-left"
-      >
-        <Index />
-      </div>
     </div>
   )
 }
