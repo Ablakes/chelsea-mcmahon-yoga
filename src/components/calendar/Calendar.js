@@ -51,6 +51,7 @@ const ButtonContainer = styled.div`
 
 const CalendarBtn = styled.button`
   font-size: 60px;
+  height: 70px;
   transition: all 0.2s;
   background-color: rgba(0, 0, 0, 0);
   color: ${props => props.theme.secondaryColor};
@@ -107,23 +108,15 @@ export default class Calendar extends Component {
     schedule: [
       {
         date: [9, 2018],
-        classDates: [1, 5, 14, 18, 30],
+        classDates: [4, 6, 11, 13, 17, 20, 24, 27],
       },
       {
         date: [10, 2018],
-        classDates: [1, 5, 14, 18, 30],
+        classDates: [1, 4, 9, 11, 15, 18, 22, 25, 29],
       },
       {
         date: [11, 2018],
-        classDates: [1, 5, 14, 18, 30],
-      },
-      {
-        date: [12, 2018],
-        classDates: [1, 9, 17, 18, 30],
-      },
-      {
-        date: [10, 2029],
-        classDates: [1, 9, 17, 18, 30],
+        classDates: [1, 5, 8, 13, 15, 19, 21, 26, 29],
       },
     ],
   }
