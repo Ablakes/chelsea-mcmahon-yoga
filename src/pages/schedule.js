@@ -36,21 +36,12 @@ const ScheduleContainer = styled.div`
   }
 `
 
-const CalendarContainer = styled.div``
-
 const CalendarKey = styled.div`
+  max-width: 480px;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 2rem;
-`
-const CalendarKeyCircle = styled.span`
-  display: inline-block;
-  background-image: linear-gradient(-180deg, #163859 0%, #021426 100%);
-  filter: drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.3));
-  min-height: 40px;
-  min-width: 40px;
-  border-radius: 50px;
-  top: 13px;
-  position: relative;
+  font-weight: 700;
+  margin-bottom: 1rem;
 `
 
 const ScheduleParagraphContainer = styled.div`
@@ -139,13 +130,13 @@ const Schedule = () => (
             </p>
             <PhoneNumber>(570)856-7788</PhoneNumber>
           </ScheduleParagraphContainer>
-          <CalendarContainer>
+          <div>
             <CalendarKey>
-              <CalendarKeyCircle /> - Indicates class at 7pm at{' '}
-              <a href="#directions">Chataeu 52</a>
+              Dates marked with a circle indicate class at 7pm at{' '}
+              <a href="#directions">Chateau 52</a>
             </CalendarKey>
             <Calendar />
-          </CalendarContainer>
+          </div>
         </ScheduleContainer>
         <hr style={{ width: '70vw', alignSelf: 'center' }} />
         <Subtitle style={{ marginTop: 0 }}>Directions</Subtitle>
@@ -153,7 +144,7 @@ const Schedule = () => (
         <MapContainer id="directions">
           <GoogleMap className="google-map" />
           <AddressContainer>
-            <p>All Classes are held at Chataeu 52:</p>
+            <p>All Classes are held at Chateau 52:</p>
             <p style={{ fontWeight: 900 }}>
               52 Main St,<br /> Delaware Water Gap, PA 18327
             </p>
