@@ -29,7 +29,7 @@ const ButtonWrapper = styled.div`
   @media (max-width: 1000px) {
     width: 472px;
   @media (max-width: 480px) {
-    width: 105vw;
+    width: 80vw;
   }
 `
 
@@ -44,7 +44,7 @@ const ButtonContainer = styled.div`
     left: 45px;
   }
   @media (max-width: 480px) {
-    left: 10vw;
+    left: -10px;
   }
 `
 
@@ -61,6 +61,7 @@ const CalendarBtn = styled.button`
   text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.308);
   @media (max-width: 480px) {
     padding: 0;
+    padding-right: 10px;
   }
   &:hover {
     font-size: 66px;

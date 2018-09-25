@@ -37,11 +37,12 @@ const ScheduleContainer = styled.div`
 `
 
 const CalendarKey = styled.div`
-  max-width: 480px;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
   font-weight: 700;
   margin-bottom: 1rem;
+  font-family: 'Lato';
 `
 
 const ScheduleParagraphContainer = styled.div`
