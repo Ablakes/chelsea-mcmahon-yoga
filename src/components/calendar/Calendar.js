@@ -80,7 +80,6 @@ const CalendarBtn = styled.button`
 `
 
 const ComingSoon = styled.div`
-  animation: fade-in 0.5s forwards;
   box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
   height: 430px;
   text-align: center;
@@ -89,11 +88,18 @@ const ComingSoon = styled.div`
   color: $primary-color;
   background-image: linear-gradient(166deg, #dff1ff 5%, #8cbce4 100%);
   text-align: center;
+  @media (max-width: 1200px) {
+    width: 450px;
+  }
+  @media (max-width: 620px) {
+    width: 90vw;
+    height: 410px;
+  }
 `
 
 const ComingSoonH3 = styled.h3`
   animation: slide-in-bottom 0.5s forwards;
-  padding-top: 35%;
+  padding-top: 40%;
 `
 
 export default class Calendar extends Component {

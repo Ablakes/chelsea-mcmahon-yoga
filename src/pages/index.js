@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components'
 
 import paintBG from '../data/images/light-paint-bg.jpg'
 import paintBGPortrait from '../data/images/paint-bg-portrait.jpg'
+import paintBGMobile from '../data/images/paint-bg-mobile.jpg'
 import theme from '../data/theme'
 
 import chelseaCrouch from '../data/images/chelsea-crouch.jpg'
@@ -37,7 +38,7 @@ const TabletImg = styled.img`
   }
 `
 
-const Container = styled.div`
+const Container = styled.section`
   background: no-repeat center url(${paintBG});
   display: flex;
   justify-content: space-between;
@@ -48,13 +49,17 @@ const Container = styled.div`
   @media (max-width: 835px) {
     background-size: cover;
   }
-  @media (max-aspect-ratio: 3/2) {
+  @media (max-aspect-ratio: 1/1) {
     background: no-repeat url(${paintBGPortrait});
+    background-size: cover;
+  }
+  @media (max-aspect-ratio: 1/2) {
+    background: no-repeat url(${paintBGMobile});
     background-size: cover;
   }
 `
 
-const AboutSection = styled.div`
+const AboutSection = styled.article`
   flex: 2;
   padding: 8rem 4rem 0 4rem;
   h3 {
@@ -126,7 +131,7 @@ export default () => {
             well.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Link to="/about/">
+            <Link to="/about/#navbar">
               <Button textContent="READ MORE" />
             </Link>
           </div>

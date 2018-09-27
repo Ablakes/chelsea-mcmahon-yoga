@@ -2,26 +2,26 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  background-image: linear-gradient(166deg, #dff1ff 5%, #8cbce4 100%);
+  background-image: linear-gradient(-180deg, #cbe3f7 0%, #b5d8f5 99%);
   border-radius: 5px;
   box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
 `
 
 const MonthTitle = styled.h3`
+  background-image: linear-gradient(-180deg, #002e4f 0%, #00243e 100%);
   margin: 0;
   border-radius: 7px 7px 0 0;
   padding: 22px 15px 22px 0;
   text-align: right;
   width: 100%;
-  background-image: linear-gradient(-180deg, #315f8c 0%, #163859 100%);
-  color: #fff6e6;
+  color: ${props => props.theme.secondaryColor};
   height: 78px;
 `
 
 const CalendarHeading = styled.th`
   border-top: 1px solid rgba(255, 246, 230, 0.363);
-  background-image: linear-gradient(-180deg, #163859 0%, #021426 100%);
-  color: #fff6e6;
+  background-image: linear-gradient(-180deg, #00233d 0%, #001527 100%);
+  color: ${props => props.theme.secondaryColor};
   font-size: 1.2rem;
   padding: 15px 0;
   font-weight: 400;
@@ -62,7 +62,7 @@ const SelectedCalendarDay = styled.td`
   }
 `
 const SelectedDayIndicator = styled.div`
-  background-image: linear-gradient(-180deg, #163859 0%, #021426 100%);
+  background-image: linear-gradient(-180deg, #00233d 0%, #001527 100%);
   display: inline-flex;
   justify-content: center;
   align-items: center;

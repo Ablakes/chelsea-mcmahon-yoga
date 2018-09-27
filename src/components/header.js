@@ -4,21 +4,52 @@ import styled, { ThemeProvider } from 'styled-components'
 import theme from '../data/theme'
 
 import bannerImage from '../data/images/banner-image.jpg'
+import bannerImageBottom from '../data/images/banner-image-bottom.jpg'
+import bannerImageMobile from '../data/images/banner-image-mobile.jpg'
 import navOval from '../data/images/nav-oval.svg'
 import swoop from '../data/images/swoop.png'
 
 const Banner = styled.div`
   background: no-repeat center url(${bannerImage});
   height: 30vh;
-  min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 1000px) {
+    max-height: 230px;
+    background: linear-gradient(
+        -90deg,
+        #021626 0%,
+        #032035 10%,
+        rgba(3, 37, 64, 0.7) 23%,
+        rgba(3, 37, 64, 0.29) 49%,
+        rgba(3, 37, 64, 0.66) 80%,
+        #031e33 92%,
+        #021626 100%
+      ),
+      no-repeat center url(${bannerImageBottom});
+  }
   @media (max-width: 850px) {
     img {
       width: 75%;
     }
+  }
+  @media (max-width: 550px) {
+    height: 22vh;
+    max-height: 230px;
+    min-height: 155px;
+    background: linear-gradient(
+        -90deg,
+        #021626 0%,
+        #032035 10%,
+        rgba(3, 37, 64, 0.7) 23%,
+        rgba(3, 37, 64, 0.29) 49%,
+        rgba(3, 37, 64, 0.66) 80%,
+        #031e33 92%,
+        #021626 100%
+      ),
+      no-repeat center url(${bannerImageMobile});
   }
 `
 
@@ -34,7 +65,7 @@ const MainTitle = styled.h1`
   @media (max-width: 850px) {
     font-size: 3rem;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     font-size: 2.2rem;
   }
 `
@@ -93,11 +124,13 @@ const Navbar = styled.nav`
 const Header = ({ siteTitle }) => (
   <ThemeProvider theme={theme}>
     <div style={{ position: 'relative', zIndex: '10' }}>
-      <Banner>
-        <MainTitle>{siteTitle}</MainTitle>
-        <img src={swoop} alt="" />
-      </Banner>
-      <Navbar>
+      <Link style={{ textDecoration: 'none' }} to="/">
+        <Banner>
+          <MainTitle>{siteTitle}</MainTitle>
+          <img src={swoop} alt="" />
+        </Banner>
+      </Link>
+      <Navbar id="navbar">
         <ul>
           <li>
             <Link to="/" activeClassName="is-active" exact={true}>
@@ -105,17 +138,17 @@ const Header = ({ siteTitle }) => (
             </Link>
           </li>
           <li>
-            <Link to="/about" activeClassName="is-active">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/schedule" activeClassName="is-active">
+            <Link to="/schedule/#navbar" activeClassName="is-active">
               Schedule
             </Link>
           </li>
           <li>
-            <Link to="/art" activeClassName="is-active">
+            <Link to="/about/#navbar" activeClassName="is-active">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/art/#navbar" activeClassName="is-active">
               Art
             </Link>
           </li>

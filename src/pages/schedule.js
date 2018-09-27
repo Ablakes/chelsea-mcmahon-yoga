@@ -4,6 +4,8 @@ import theme from '../data/theme'
 
 import paintBG from '../data/images/light-paint-bg.jpg'
 import paintBGPortrait from '../data/images/paint-bg-portrait.jpg'
+import paintBGMobile from '../data/images/paint-bg-mobile.jpg'
+
 import GoogleMap from '../components/googleMap'
 
 import Calendar from '../components/calendar/Calendar'
@@ -24,12 +26,17 @@ const Container = styled.div`
   background-size: cover;
   margin-top: -4.4rem;
   padding-bottom: 4.4rem;
-  @media (max-aspect-ratio: 3/2) {
+  @media (max-width: 1000px) {
     background: no-repeat url(${paintBGPortrait});
     background-size: cover;
   }
+  @media (max-width: 450px) {
+    background: no-repeat url(${paintBGMobile});
+    background-size: cover;
+  }
 `
-const ScheduleContainer = styled.div`
+
+const ScheduleContainer = styled.section`
   display: flex;
   @media (max-width: 1000px) {
     flex-direction: column-reverse;
@@ -43,9 +50,12 @@ const CalendarKey = styled.div`
   font-weight: 700;
   margin-bottom: 1rem;
   font-family: 'Lato';
+  @media (max-width: 550px) {
+    width: 85%;
+  }
 `
 
-const ScheduleParagraphContainer = styled.div`
+const ScheduleParagraphContainer = styled.article`
   color: ${props => props.theme.primaryColor};
   padding: 1rem 0 3rem 5rem;
   font-size: 1.1rem;
@@ -76,7 +86,7 @@ const PhoneNumber = styled.p`
   }
 `
 
-const MapContainer = styled.div`
+const MapContainer = styled.section`
   display: flex;
   justify-content: center;
   @media (max-width: 830px) {

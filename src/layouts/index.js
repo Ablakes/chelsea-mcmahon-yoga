@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Favicon from '../data/images/favicon.png'
 import './index.scss'
 
 const Layout = ({ children, data, location }) => (
@@ -15,6 +16,7 @@ const Layout = ({ children, data, location }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     >
+      <link rel="shortcut icon" type="image/png" href={Favicon} />
       <style>
         @import
         url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700');
