@@ -150,12 +150,12 @@ const Header = ({ siteTitle }) => (
             </Link>
           </li>
           <li>
-            <Link to="/about/#navbar" activeClassName="is-active">
+            <Link to="/about" activeClassName="is-active">
               About
             </Link>
           </li>
           <li>
-            <Link to="/art/#navbar" activeClassName="is-active">
+            <Link to="/art" activeClassName="is-active">
               Art
             </Link>
           </li>
