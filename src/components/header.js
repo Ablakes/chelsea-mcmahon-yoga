@@ -11,6 +11,7 @@ import swoop from '../data/images/swoop.png'
 
 const Banner = styled.div`
   background: no-repeat center url(${bannerImage});
+  min-height: 270px;
   height: 30vh;
   display: flex;
   justify-content: center;
@@ -36,9 +37,8 @@ const Banner = styled.div`
     }
   }
   @media (max-width: 550px) {
-    height: 22vh;
     max-height: 230px;
-    min-height: 155px;
+    min-height: 230px;
     background: linear-gradient(
         -90deg,
         #021626 0%,
@@ -123,7 +123,14 @@ const Navbar = styled.nav`
 
 const Header = ({ siteTitle }) => (
   <ThemeProvider theme={theme}>
-    <div style={{ position: 'relative', zIndex: '10' }}>
+    <div
+      style={{
+        position: 'relative',
+        zIndex: '10',
+        maxWidth: '1440px',
+        margin: '0 auto',
+      }}
+    >
       <Link style={{ textDecoration: 'none' }} to="/">
         <Banner>
           <MainTitle>{siteTitle}</MainTitle>

@@ -28,7 +28,8 @@ html {
 }
 
 body {
-  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #000b14;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -40,6 +40,7 @@ const TabletImg = styled.img`
 
 const Container = styled.section`
   background: no-repeat center url(${paintBG});
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   position: relative;
