@@ -12,6 +12,7 @@ import swoop from '../data/images/swoop.png'
 const Banner = styled.div`
   background: no-repeat center url(${bannerImage});
   min-height: 270px;
+  max-height: 310px;
   height: 30vh;
   display: flex;
   justify-content: center;
