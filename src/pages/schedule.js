@@ -76,6 +76,12 @@ const BoldPrices = styled.p`
     text-align: center;
   }
 `
+const ContactContainer = styled.div`
+  @media (min-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+  }
+`
 
 const PhoneNumber = styled.p`
   font-weight: 900;
@@ -83,6 +89,21 @@ const PhoneNumber = styled.p`
   letter-spacing: 1.1px;
   @media (max-width: 1000px) {
     text-align: center;
+  }
+`
+
+const MailIconContainer = styled.div`
+  @media (max-width: 1000px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+`
+
+const MailIcon = styled.svg`
+  height: 35px;
+  width: 35px;
+  &:hover {
   }
 `
 
@@ -139,7 +160,54 @@ const Schedule = () => (
               me. I’d rather see you continue than miss out or disappear! Call
               to pre-register or ask questions. Space is limited (I’d call).
             </p>
-            <PhoneNumber>(570)856-7788</PhoneNumber>
+            <ContactContainer>
+              <PhoneNumber>(570)856-7788</PhoneNumber>
+              <MailIconContainer>
+                <a href="mailto:chelseamcmahon820@yahoo.com">
+                  <MailIcon
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 23.5 20.625"
+                    x="0px"
+                    y="0px"
+                  >
+                    <g data-name="Слой 2">
+                      <g data-name="Слой 1">
+                        <path d="M20.75,16.5h-18A2.75,2.75,0,0,1,0,13.75v-11A2.75,2.75,0,0,1,2.75,0h18A2.75,2.75,0,0,1,23.5,2.75v11A2.75,2.75,0,0,1,20.75,16.5Zm-18-15A1.25,1.25,0,0,0,1.5,2.75v11A1.25,1.25,0,0,0,2.75,15h18A1.25,1.25,0,0,0,22,13.75v-11A1.25,1.25,0,0,0,20.75,1.5Z" />
+                        <path d="M11.75,11.67a2.74,2.74,0,0,1-1.94-.8l-9-9,1-1.1,9.07,9.07a1.25,1.25,0,0,0,1.77,0L21.46,1,22.52,2l-8.83,8.83A2.74,2.74,0,0,1,11.75,11.67Z" />
+                        <polygon points="1.83 15.41 1.26 14.92 0.73 14.38 7.5 7.62 8.56 8.68 1.83 15.41" />
+                        <rect
+                          x="17.97"
+                          y="6.78"
+                          width="1.5"
+                          height="9.24"
+                          transform="translate(-2.58 16.58) rotate(-45)"
+                        />
+                      </g>
+                    </g>
+                    <text
+                      x="0"
+                      y="31.5"
+                      fill="#000000"
+                      font-size="5px"
+                      font-weight="bold"
+                      font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
+                    >
+                      Created by Evgenii Likhachov
+                    </text>
+                    <text
+                      x="0"
+                      y="36.5"
+                      fill="#000000"
+                      font-size="5px"
+                      font-weight="bold"
+                      font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
+                    >
+                      from the Noun Project
+                    </text>
+                  </MailIcon>
+                </a>
+              </MailIconContainer>
+            </ContactContainer>
           </ScheduleParagraphContainer>
           <div>
             <CalendarKey>

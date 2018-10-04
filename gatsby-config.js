@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Chelsea McMahon Yoga',
+    title: 'Chelsea McMahon Yoga | Stroudsburg Pennsylvania',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

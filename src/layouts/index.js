@@ -12,8 +12,12 @@ const Layout = ({ children, data, location }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          name: 'description',
+          content:
+            'Chelsea McMahon instructing style is based on a lot of experimentation with fluidity, mixing balance work with momentum, stretching and strengthening the muscles, and not taking the self too seriously. She earned her 500hr RYT at Boundless Yoga in Stroudsburg, PA in 2018.',
+        },
+        { name: 'keywords', content: 'Yoga, Stroudsburg, Pennsylvania' },
       ]}
     >
       <link rel="shortcut icon" type="image/png" href={Favicon} />

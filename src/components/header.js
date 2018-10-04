@@ -43,10 +43,10 @@ const Banner = styled.div`
     background: linear-gradient(
         -90deg,
         #021626 0%,
-        #032035 10%,
-        rgba(3, 37, 64, 0.7) 23%,
+        rgba(3, 32, 53, 0.97) 12%,
+        rgba(3, 37, 64, 0.7) 30%,
         rgba(3, 37, 64, 0.29) 49%,
-        rgba(3, 37, 64, 0.66) 80%,
+        rgba(3, 37, 64, 0.56) 71%,
         #031e33 92%,
         #021626 100%
       ),
@@ -122,7 +122,7 @@ const Navbar = styled.nav`
   }
 `
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <ThemeProvider theme={theme}>
     <div
       style={{
@@ -134,7 +134,7 @@ const Header = ({ siteTitle }) => (
     >
       <Link style={{ textDecoration: 'none' }} to="/">
         <Banner>
-          <MainTitle>{siteTitle}</MainTitle>
+          <MainTitle>Chelsea McMahon Yoga</MainTitle>
           <img src={swoop} alt="" />
         </Banner>
       </Link>
