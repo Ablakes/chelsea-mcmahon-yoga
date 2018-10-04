@@ -60,9 +60,8 @@ const AboutPage = () => (
         <Subtitle>About</Subtitle>
         <hr />
         <Para>
-          Hi! My name is Chelsea McMahon. I earned my 500hr. RYT at Boundless
-          Yoga in Stroudsburg, PA this year. I first tried yoga about … 12 years
-          ago in the downstairs of the house I rented when I was a student at
+          I earned my 500 hour RYT at Boundless Yoga in Stroudsburg, PA this
+          year. I first tried yoga about 12 years ago while I was a student at
           the local university. I’ve always enjoyed movement and grew up
           dancing, tumbling, hiking like crazy, and riding my bike. I’m also an
           art freak which has found its way into my practice as well.
