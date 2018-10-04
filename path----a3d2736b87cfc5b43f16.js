@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{79:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Chelsea McMahon Yoga | Stroudsburg Pennsylvania"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----a3d2736b87cfc5b43f16.js.map
