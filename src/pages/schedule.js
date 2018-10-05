@@ -103,7 +103,9 @@ const MailIconContainer = styled.div`
 const MailIcon = styled.svg`
   height: 35px;
   width: 35px;
+  transition: transform 0.3s ease;
   &:hover {
+    transform: scale(1.07);
   }
 `
 
@@ -157,8 +159,9 @@ const Schedule = () => (
             </BoldPrices>
             <p>
               *If anything is going on personally or financially, just talk to
-              me. I’d rather see you continue than miss out or disappear! Call
-              to pre-register or ask questions. Space is limited (I’d call).
+              me. I’d rather see you continue than miss out or disappear! or
+              email to pre-register or ask questions. Space is limited (I’d
+              call).
             </p>
             <ContactContainer>
               <PhoneNumber>(570)856-7788</PhoneNumber>
