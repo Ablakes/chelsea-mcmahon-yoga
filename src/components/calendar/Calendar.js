@@ -124,6 +124,14 @@ export default class Calendar extends Component {
         date: [11, 2018],
         classDates: [1, 5, 8, 13, 15, 19, 21, 26, 29],
       },
+      {
+        date: [12, 2018],
+        classDates: [2,4,9,6,10,13,16,17,20,23,27,30,31],
+      },
+      {
+        date: [1, 2019],
+        classDates: [3,6,7,10,13,14,17,20,21,24,27,31],
+      },  
     ],
   }
 

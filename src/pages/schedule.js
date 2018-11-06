@@ -138,16 +138,24 @@ const Schedule = () => (
         <ScheduleContainer>
           <ScheduleParagraphContainer>
             <p>
-              Everyone is welcome! Classes are designed to be useful to all
-              yogis with any type of experience.{' '}
+              All classes are open level.{' '}
               <span style={{ fontWeight: 900 }}>
                 First time you attend class here it’s $5
-              </span>. We have class cards that you can use up during the rest
-              of the scheduled season’s offerings. Class offerings are marked on
-              the calendar and class generally lasts about 60-70 minutes
-              starting promptly at 7pm. Come a few minutes early to set up and
-              settle in. Feel free to bring your own stuff, or I have a few mats
-              and props available in the space.
+              </span>. Then we have class cards that can be used up during the
+              rest of the season’s offerings.
+            </p>
+            <p>
+              Offerings are marked above and class generally lasts about 60
+              minutes.{' '}
+              <span style={{ fontWeight: 900 }}>
+                Weeknights start promptly at 7pm and Sundays at 4pm.{' '}
+              </span>Come a few minutes early to set up and settle in. Feel free
+              to bring your own stuff or I have a few mats and props available
+              in the space.
+            </p>
+            <p>
+              Private instruction and parties can be arranged. Also, I offer
+              group and private art lessons. Holla.
             </p>
             <BoldPrices>
               5 Classes $70 <br />
@@ -159,9 +167,11 @@ const Schedule = () => (
             </BoldPrices>
             <p>
               *If anything is going on personally or financially, just talk to
-              me. I’d rather see you continue than miss out or disappear! or
-              email to pre-register or ask questions. Space is limited (I’d
-              call).
+              me. I’d rather see you continue than miss out or disappear! Call
+              to pre-register or ask questions. Space is limited (I’d call).
+              Also, from this date forward one dollar from each class you
+              purchase will be donated to a charitable cause which we can pick
+              out when we do the transaction.
             </p>
             <ContactContainer>
               <PhoneNumber>(570)856-7788</PhoneNumber>
@@ -194,8 +204,10 @@ const Schedule = () => (
           </ScheduleParagraphContainer>
           <div>
             <CalendarKey>
-              Dates marked with a circle indicate class at 7pm at{' '}
-              <a href="#directions">Chateau 52</a>
+              Encircled dates indicate class at{' '}
+              <a href="#directions">3 Moons</a>
+              <br />
+              Sunday classes start at 4pm. All other classes start at 7pm.
             </CalendarKey>
             <Calendar />
           </div>
@@ -206,7 +218,7 @@ const Schedule = () => (
         <MapContainer id="directions">
           <GoogleMap className="google-map" />
           <AddressContainer>
-            <p>All Classes are held at Chateau 52:</p>
+            <p>All Classes are held at 3 Moons:</p>
             <p style={{ fontWeight: 900 }}>
               52 Main St,<br /> Delaware Water Gap, PA 18327
             </p>

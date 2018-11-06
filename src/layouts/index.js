@@ -20,6 +20,18 @@ const Layout = ({ children, data, location }) => (
         { name: 'keywords', content: 'Yoga, Stroudsburg, Pennsylvania' },
       ]}
     >
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-128765057-1"
+      />
+      <script>
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-128765057-1');
+        `}
+      </script>
       <link rel="shortcut icon" type="image/png" href={Favicon} />
       <style>
         @import
