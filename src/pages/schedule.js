@@ -173,6 +173,7 @@ const Schedule = () => (
               purchase will be donated to a charitable cause which we can pick
               out when we do the transaction.
             </p>
+            {/*
             <ContactContainer>
               <PhoneNumber>(570)856-7788</PhoneNumber>
               <MailIconContainer>
@@ -201,6 +202,7 @@ const Schedule = () => (
                 </a>
               </MailIconContainer>
             </ContactContainer>
+            */}
           </ScheduleParagraphContainer>
           <div>
             <CalendarKey>
