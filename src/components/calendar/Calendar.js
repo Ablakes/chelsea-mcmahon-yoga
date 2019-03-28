@@ -126,12 +126,12 @@ export default class Calendar extends Component {
       },
       {
         date: [12, 2018],
-        classDates: [2,4,9,6,10,13,16,17,20,23,27,30,31],
+        classDates: [2, 4, 9, 6, 10, 13, 16, 17, 20, 23, 27, 30, 31],
       },
       {
         date: [1, 2019],
-        classDates: [3,6,7,10,13,14,17,20,21,24,27,31],
-      },  
+        classDates: [3, 6, 7, 10, 13, 14, 17, 20, 21, 24, 27, 31],
+      },
     ],
   }
 
@@ -139,11 +139,19 @@ export default class Calendar extends Component {
     const currentArray = this.state.schedule.filter(x => {
       return x.date[0] === currentMonth
     })
-    this.setState({
-      currentScheduleIndex: this.state.schedule.indexOf(currentArray[0]),
-      currentMonth: currentArray[0].date[0],
-      totalMonths: this.state.schedule.length + 1,
-    })
+    if (!currentArray[0]) {
+      this.setState({
+        currentScheduleIndex: this.state.schedule.length,
+        currentMonth: currentMonth,
+        totalMonths: this.state.schedule.length + 1,
+      })
+    } else {
+      this.setState({
+        currentScheduleIndex: this.state.schedule.indexOf(currentArray[0]),
+        currentMonth: currentArray[0].date[0],
+        totalMonths: this.state.schedule.length + 1,
+      })
+    }
   }
 
   handleLeftClick() {

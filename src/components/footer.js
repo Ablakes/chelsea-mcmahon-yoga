@@ -40,9 +40,7 @@ const IconContainer = styled.div`
 const Footer = () => (
   <ThemeProvider theme={theme}>
     <FooterContainer>
-      {/*
       <IconContainer>
-        
         <a
           href="https://www.instagram.com/chelseamcmahononline/"
           target="_blank"
@@ -91,9 +89,7 @@ const Footer = () => (
             </g>
           </svg>
         </a>
-        
       </IconContainer>
-      */}
     </FooterContainer>
   </ThemeProvider>
 )

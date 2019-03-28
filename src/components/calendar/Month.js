@@ -52,6 +52,7 @@ const SelectedCalendarDay = styled.td`
   color: #f2fcfe;
   font-weight: 700;
   text-align: center;
+  width: 70px;
   @media (max-width: 450px) {
     font-size: 0.9rem;
     height: 55px;

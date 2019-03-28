@@ -101,8 +101,24 @@ const Navbar = styled.nav`
     letter-spacing: 1px;
     font-size: 1.2rem;
     color: ${props => props.theme.secondaryColor};
+    position: relative;
+    &:after {
+      height: 2px;
+      background: ${props => props.theme.secondaryColor};
+      content: '';
+      width: 0;
+      position: absolute;
+      transform: translateX(-50%);
+      transition: width 0.3s;
+      transition-timing-function: cubic-bezier(1, -0.45, 0, 1.81);
+      left: 50%;
+      margin-top: 1.7rem;
+    }
     &:hover {
-      border-bottom: 2px solid ${props => props.theme.secondaryColor};
+      outline: none;
+      &:after {
+        width: calc(100% - 10px);
+      }
     }
   }
   @media (max-width: 1200px) {

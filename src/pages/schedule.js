@@ -1,3 +1,4 @@
+/*
 import React from 'react'
 
 import styled, { ThemeProvider } from 'styled-components'
@@ -36,8 +37,8 @@ export default () => {
     </div>
   )
 }
+*/
 
-/*
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from '../data/theme'
@@ -168,10 +169,9 @@ const AddressContainer = styled.div`
     margin: 20px 0 0 0;
 `
 
-const Schedule = () => ({
-<ThemeProvider theme={theme}>
+const Schedule = () => (
+  <ThemeProvider theme={theme}>
     <div>
-      
       <Container>
         <Subtitle>Schedule</Subtitle>
         <hr style={{ width: '70vw', alignSelf: 'center' }} />
@@ -214,7 +214,7 @@ const Schedule = () => ({
               purchase will be donated to a charitable cause which we can pick
               out when we do the transaction.
             </p>
-            
+
             <ContactContainer>
               <PhoneNumber>(570)856-7788</PhoneNumber>
               <MailIconContainer>
@@ -267,11 +267,8 @@ const Schedule = () => ({
           </AddressContainer>
         </MapContainer>
       </Container>
-      
     </div>
   </ThemeProvider>
-  
-})
+)
 
 export default Schedule
-*/
