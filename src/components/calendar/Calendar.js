@@ -51,7 +51,7 @@ const ButtonContainer = styled.div`
 const CalendarBtn = styled.button`
   font-size: 60px;
   height: 70px;
-  transition: all 0.2s;
+  transition: all 0.1s;
   background-color: rgba(0, 0, 0, 0);
   color: ${props => props.theme.secondaryColor};
   border: none;
@@ -64,14 +64,15 @@ const CalendarBtn = styled.button`
     padding-right: 10px;
   }
   &:hover {
-    font-size: 66px;
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(1.05);
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
   }
   &:active {
     transform: translateY(0);
   }
   &:disabled {
     color: #b4b4b4;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.308);
   }
   &:disabled:hover {
     font-size: 60px;
