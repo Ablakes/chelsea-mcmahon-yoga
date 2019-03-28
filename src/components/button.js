@@ -12,10 +12,10 @@ const Btn = styled.div`
   text-align: center;
   margin-top: 0.75rem;
   backface-visibility: hidden;
-  width: 10rem;
+
   &:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
     transition: all 0.2s ease;
   }
 `

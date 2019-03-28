@@ -87,8 +87,8 @@ const AboutPage = () => (
           relax and feel good about just being who they are. Come!
         </Para>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <Button textContent="HOME" />
+          <Link to="/schedule" style={{ textDecoration: 'none' }}>
+            <Button textContent="SCHEDULE" />
           </Link>
         </div>
       </AboutContainer>
