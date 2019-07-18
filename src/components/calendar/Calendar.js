@@ -99,8 +99,9 @@ const ComingSoon = styled.div`
 `
 
 const ComingSoonH3 = styled.h3`
+  font-weight: 500;
   animation: slide-in-bottom 0.5s forwards;
-  padding-top: 40%;
+  padding-top: 35%;
 `
 
 export default class Calendar extends Component {
@@ -114,24 +115,28 @@ export default class Calendar extends Component {
     currentScheduleIndex: 0,
     schedule: [
       {
-        date: [9, 2018],
-        classDates: [4, 6, 11, 13, 17, 20, 24, 27],
+        date: [7, 2019],
+        classDates: [2, 9, 16, 23, 4, 11, 18, 25, 30],
       },
       {
-        date: [10, 2018],
-        classDates: [1, 4, 9, 11, 15, 18, 22, 25, 29],
+        date: [8, 2019],
+        classDates: [6, 13, 20, 27, 1, 8, 15, 22, 29],
       },
       {
-        date: [11, 2018],
-        classDates: [1, 5, 8, 13, 15, 19, 21, 26, 29],
+        date: [9, 2019],
+        classDates: [3, 10, 17, 24, 5, 12, 19, 26],
       },
       {
-        date: [12, 2018],
-        classDates: [2, 4, 9, 6, 10, 13, 16, 17, 20, 23, 27, 30, 31],
+        date: [10, 2019],
+        classDates: [1, 3, 8, 10, 15, 17, 22, 24, 29, 31],
       },
       {
-        date: [1, 2019],
-        classDates: [3, 6, 7, 10, 13, 14, 17, 20, 21, 24, 27, 31],
+        date: [11, 2019],
+        classDates: [5, 7, 12, 14, 19, 21, 26, 28],
+      },
+      {
+        date: [12, 2019],
+        classDates: [3, 5, 10, 12, 17, 19, 24, 26, 31],
       },
     ],
   }
@@ -204,7 +209,9 @@ export default class Calendar extends Component {
           })}
           {currentScheduleIndex === schedule.length && (
             <ComingSoon>
-              <ComingSoonH3>Coming Soon!</ComingSoonH3>
+              <ComingSoonH3>
+                More classes <br />coming soon!
+              </ComingSoonH3>
             </ComingSoon>
           )}
         </CalendarContainer>

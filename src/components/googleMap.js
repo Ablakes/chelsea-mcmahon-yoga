@@ -26,7 +26,7 @@ export default () => {
       <div className="gmap_canvas">
         <MapIframe
           id="gmap_canvas"
-          src="https://maps.google.com/maps?q=52%20Main%20Street.%20Delaware%20Water%20Gap%2C%20PA.%2018327&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=%20FitFusion%20Wellness%203115%20Route%20611.%20Stroudsburg%20%2C%20PA.%2018360&t=&z=13&ie=UTF8&iwloc=&output=embed"
           frameBorder="0"
           scrolling="no"
           marginHeight="0"

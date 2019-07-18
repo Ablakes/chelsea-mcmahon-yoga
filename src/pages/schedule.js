@@ -1,44 +1,3 @@
-/*
-import React from 'react'
-
-import styled, { ThemeProvider } from 'styled-components'
-import theme from '../data/theme'
-
-import paintBG from '../data/images/light-paint-bg.jpg'
-import paintBGPortrait from '../data/images/paint-bg-portrait.jpg'
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  background: no-repeat url(${paintBG});
-  background-size: cover;
-  margin-top: -4.4rem;
-  @media (max-aspect-ratio: 3/2) {
-    background: no-repeat url(${paintBGPortrait});
-    background-size: cover;
-  }
-`
-
-const Subtitle = styled.h1`
-  margin-top: 230px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  color: ${props => props.theme.primaryColor};
-`
-
-export default () => {
-  return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <Container style={{ height: '70vh' }}>
-          <Subtitle>COMING SOON!</Subtitle>
-        </Container>
-      </ThemeProvider>
-    </div>
-  )
-}
-*/
-
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from '../data/theme'
@@ -78,6 +37,7 @@ const Container = styled.div`
 `
 
 const ScheduleContainer = styled.section`
+  margin: 0 auto 40px auto;
   display: flex;
   @media (max-width: 1000px) {
     flex-direction: column-reverse;
@@ -85,7 +45,7 @@ const ScheduleContainer = styled.section`
 `
 
 const CalendarKey = styled.div`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
   font-weight: 700;
@@ -93,60 +53,6 @@ const CalendarKey = styled.div`
   font-family: 'Lato';
   @media (max-width: 550px) {
     width: 85%;
-  }
-`
-
-const ScheduleParagraphContainer = styled.article`
-  color: ${props => props.theme.primaryColor};
-  padding: 1rem 0 3rem 5rem;
-  font-size: 1.1rem;
-  @media (max-width: 1250px) {
-    font-size: 1rem;
-  }
-  @media (max-width: 1000px) {
-    padding: 2rem 4rem 2rem 4rem;
-  }
-  @media (max-width: 480px) {
-    padding: 2rem 2rem 2rem 2rem;
-  }
-`
-
-const BoldPrices = styled.p`
-  font-weight: 900;
-  @media (max-width: 1000px) {
-    text-align: center;
-  }
-`
-const ContactContainer = styled.div`
-  @media (min-width: 1000px) {
-    display: flex;
-    flex-direction: column;
-  }
-`
-
-const PhoneNumber = styled.p`
-  font-weight: 900;
-  font-size: 1.3rem;
-  letter-spacing: 1.1px;
-  @media (max-width: 1000px) {
-    text-align: center;
-  }
-`
-
-const MailIconContainer = styled.div`
-  @media (max-width: 1000px) {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-`
-
-const MailIcon = styled.svg`
-  height: 35px;
-  width: 35px;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.07);
   }
 `
 
@@ -177,79 +83,14 @@ const Schedule = () => (
         <hr style={{ width: '70vw', alignSelf: 'center' }} />
 
         <ScheduleContainer>
-          <ScheduleParagraphContainer>
-            <p>
-              All classes are open level.{' '}
-              <span style={{ fontWeight: 900 }}>
-                First time you attend class here it’s $5
-              </span>. Then we have class cards that can be used up during the
-              rest of the season’s offerings.
-            </p>
-            <p>
-              Offerings are marked above and class generally lasts about 60
-              minutes.{' '}
-              <span style={{ fontWeight: 900 }}>
-                Weeknights start promptly at 7pm and Sundays at 4pm.{' '}
-              </span>Come a few minutes early to set up and settle in. Feel free
-              to bring your own stuff or I have a few mats and props available
-              in the space.
-            </p>
-            <p>
-              Private instruction and parties can be arranged. Also, I offer
-              group and private art lessons. Holla.
-            </p>
-            <BoldPrices>
-              5 Classes $70 <br />
-              10 Classes $125 <br />
-              15 Classes $180 <br />
-              20 Classes $220 <br />
-              Season Unlimited $260 <br />
-              Drop-In $15 <br />
-            </BoldPrices>
-            <p>
-              *If anything is going on personally or financially, just talk to
-              me. I’d rather see you continue than miss out or disappear! Call
-              to pre-register or ask questions. Space is limited (I’d call).
-              Also, from this date forward one dollar from each class you
-              purchase will be donated to a charitable cause which we can pick
-              out when we do the transaction.
-            </p>
-
-            <ContactContainer>
-              <PhoneNumber>(570)856-7788</PhoneNumber>
-              <MailIconContainer>
-                <a href="mailto:chelseamcmahon820@yahoo.com">
-                  <MailIcon
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 23.5 20.625"
-                    x="0px"
-                    y="0px"
-                  >
-                    <g data-name="Слой 2">
-                      <g data-name="Слой 1">
-                        <path d="M20.75,16.5h-18A2.75,2.75,0,0,1,0,13.75v-11A2.75,2.75,0,0,1,2.75,0h18A2.75,2.75,0,0,1,23.5,2.75v11A2.75,2.75,0,0,1,20.75,16.5Zm-18-15A1.25,1.25,0,0,0,1.5,2.75v11A1.25,1.25,0,0,0,2.75,15h18A1.25,1.25,0,0,0,22,13.75v-11A1.25,1.25,0,0,0,20.75,1.5Z" />
-                        <path d="M11.75,11.67a2.74,2.74,0,0,1-1.94-.8l-9-9,1-1.1,9.07,9.07a1.25,1.25,0,0,0,1.77,0L21.46,1,22.52,2l-8.83,8.83A2.74,2.74,0,0,1,11.75,11.67Z" />
-                        <polygon points="1.83 15.41 1.26 14.92 0.73 14.38 7.5 7.62 8.56 8.68 1.83 15.41" />
-                        <rect
-                          x="17.97"
-                          y="6.78"
-                          width="1.5"
-                          height="9.24"
-                          transform="translate(-2.58 16.58) rotate(-45)"
-                        />
-                      </g>
-                    </g>
-                  </MailIcon>
-                </a>
-              </MailIconContainer>
-            </ContactContainer>
-          </ScheduleParagraphContainer>
           <div>
             <CalendarKey>
-              Encircled dates indicate class at{' '}
-              <a href="#directions">3 Moons</a>
+              Circled dates indicate class at{' '}
+              <a href="#directions">FitFusion Wellness</a>
               <br />
-              Sunday classes start at 4pm. All other classes start at 7pm.
+              <b />Tuesday classes are from 6pm-7pm.
+              <br />
+              Thursday classes are from 5pm-6pm.
             </CalendarKey>
             <Calendar />
           </div>
@@ -260,9 +101,17 @@ const Schedule = () => (
         <MapContainer id="directions">
           <GoogleMap className="google-map" />
           <AddressContainer>
-            <p>All Classes are held at 3 Moons:</p>
+            <p>All Classes are held at FitFusion Wellness:</p>
             <p style={{ fontWeight: 900 }}>
-              52 Main St,<br /> Delaware Water Gap, PA 18327
+              3115 Route 611 <br /> Stroudsburg, PA 18360
+            </p>
+            <p>
+              <a
+                href="https://www.fitfusionwellness.com/pricing-copy"
+                target="_blank"
+              >
+                Click here for pricing information.
+              </a>
             </p>
           </AddressContainer>
         </MapContainer>
